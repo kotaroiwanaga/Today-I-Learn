@@ -1,0 +1,57 @@
+## static_cast
+暗黙のキャストを明示的に行う。プログラマーの責任でやっていることをコンパイラに伝える  
+(読み手にもわかったうえでキャストしていることを伝える)ために使う。  
+ ※暗黙のキャスト：コンパイラが変換方法をわかっていて、違う方に値を入れたときに自動的に行う変換  
+ 　　　　　　　　　⇒省略可能なキャストのこと  
+ 
+ 書式
+ ```
+ static_cast<型>(変換したいデータ)
+ ```
+ 
+
+  例
+  ```
+  #include <stdio.h>
+
+int main()
+{
+    signed char a = -1;
+    int b;
+
+    b = a;
+    printf("%08X (%d)\n", b, b);        // FFFFFFFF (-1)
+
+    b = static_cast<unsigned char>(a)   // b = (unsigned char)a;
+    printf("%08X (%d)\n", b, b);        // 000000FF (255)
+
+    return 0;
+}
+  ```
+  
+  ## dynamic_cast
+  親クラスの型のポインタを子クラスのポインタにキャストするときに利用する。  
+  - ポインタが指す実体がキャスト先のクラスまたはその子孫クラスである場合  
+    ⇒指定した型にキャストされる
+  - ポインタが指す実体がキャスト先のクラスとして使用できない場合  
+  　⇒**NULL(nullptr)に置き換えられる**  
+   
+   書式
+   
+   
+   
+   ## 参考
+   static_cast  
+   http://yohshiy.blog.fc2.com/blog-entry-17.html
+   
+   dynamic_cast  
+   http://yohshiy.blog.fc2.com/blog-entry-15.html
+   
+   const_cast  
+   http://yohshiy.blog.fc2.com/blog-entry-16.html
+   
+   static_cast/reinterpret_cast/const_cast  
+   http://www7b.biglobe.ne.jp/~robe/cpphtml/html02/cpp02041.html
+   
+   static_cast/dynamic_cast/reinterpret_cast/const_cast  
+   https://www.yunabe.jp/docs/cpp_casts.html
