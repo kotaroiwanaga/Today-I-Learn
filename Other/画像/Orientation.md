@@ -1,5 +1,3 @@
-http://dqn.sakusakutto.jp/2009/02/jpegexiforientaion.html
-
 | Orientation	| どう補正すれば正しい向きになるか |   
 |:-:|:-:|  
 1	| そのまま
@@ -10,3 +8,6 @@ http://dqn.sakusakutto.jp/2009/02/jpegexiforientaion.html
 6	| 時計周りに90度回転
 7	| 上下反転、時計周りに90度回転
 8	| 時計周りに270度回転
+
+### 参考
+http://dqn.sakusakutto.jp/2009/02/jpegexiforientaion.html
