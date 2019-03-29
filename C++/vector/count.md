@@ -1,0 +1,64 @@
+### std::count で特定の要素の数を数える
+```
+#include <vector>
+
+int main(int argc, char const* argv[])
+{
+  int i_array [] = {1, 2, 2, 3, 4, 4, 4, 5};
+  vector<int> v(i_array, i_array+sizeof(i_array));
+  
+  size_t n_count = std::count(v.begin(), v.end(), 4);
+  
+  std::cout << n_count << std::endl;
+  return 0;
+}
+'''
+
+### std::count_if で評価関数の戻り値がtrueになるものを数える
+```
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+// 評価関数:iが奇数ならtrue
+bool is_odd (int i) {
+        return ( (i%2) == 1);
+}
+
+int main(int argc, char const* argv[])
+{
+        vector<int> v;
+        for (int i = 0; i < 10; i++) {
+                v.push_back(i);
+        }
+        
+        size_t n_count = std::count_if(v.begin(), v.end(), is_odd);
+        
+        std::cout << n_count << std::endl;
+        return 0;
+}
+```
+
+### std::countを使って存在確認
+```
+#include <vector>
+
+int main(int argc, char const* argv[])
+{
+  int i_array [] = {1, 2, 2, 3, 4, 4, 4, 5};
+  vector<int> v(i_array, i_array+sizeof(i_array));
+  int searchNum = 3;
+  
+  if(std::count(v.begin(), v.end(), searchNum) > 0)
+  {
+    std::cout << searchNum << "exists" << std::endl;
+  }
+  else
+  {
+    std::cout << searchNum << "doesn't exists" << std::endl;
+  }
+  
+  return 0;
+}
+```
