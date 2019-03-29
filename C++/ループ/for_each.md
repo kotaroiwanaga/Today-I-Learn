@@ -2,21 +2,26 @@
 
 ### forとiteratorを使う
 ```
+#include <iostream>
 #include <vector>
-// ↑もしかしたらいらんかも
 
 int main(int argc, const char* argv[])
 {
     int intArray[] = {1, 2, 3};
-    std::vector<int> v(intArray, intArray+sizeof(intArray));
+    //std::vector<int> v(intArray, intArray+sizeof(intArray));
+    std::vector<int> v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
 
     for(std::vector<int>::const_iterator itr = v.begin(); itr != v.end(); ++itr)
     {
         std::cout << *itr << std::endl;
     }
+    
 }
 ```
-
+## 参考
 https://cpprefjp.github.io/lang/cpp11/range_based_for.html
 
 https://qiita.com/_EnumHack/items/f462042ec99a31881a81
