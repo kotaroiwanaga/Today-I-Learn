@@ -67,5 +67,5 @@ after strcat
 9 : y
 str0 size : 10
 
-cout str0 : HelloGoobye
+cout str0 : HelloGoobye ←配列の要素数分出力するのではなく、先頭アドレスからNULL文字まで出力する
 ```
