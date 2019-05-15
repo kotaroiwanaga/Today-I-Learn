@@ -1,4 +1,6 @@
-■wine(exeファイルの実行に使う)のインストール
+**※ここの記載だけでは不完全、実行できることを確認できてない**
+
+### wine(exeファイルの実行に使う)のインストール
 > yum install --enablerepo=epel wine
 
 ×文字化け対策用にwinetricksを利用してフォントのインストール
