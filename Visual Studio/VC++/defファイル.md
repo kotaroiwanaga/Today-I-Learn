@@ -1,7 +1,8 @@
 ## 定義ファイル(.def)とは
 __declspec(dllexport) のようにDLLが公開する関数を決めることができるテキストファイル
 
-defファイルで公開できるのは関数と変数だけ(クラスやクラスのメンバは公開できないよ)
+※linuxだと.map  
+※defファイルで公開できるのは関数と変数だけ(クラスやクラスのメンバは公開できないよ)
 
 書き方は下記参照(わっかりにくいけど)  
 - https://docs.microsoft.com/ja-jp/cpp/build/reference/exports?view=vs-2019  
