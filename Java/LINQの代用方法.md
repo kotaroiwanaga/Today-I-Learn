@@ -2,7 +2,7 @@ C#のLINQの機能をJavaで実現するには
 
 ## 合計値(int)
 ```java
-import.util.*;
+import java.util.*;
 
 List<Integer> list = new ArrayList<Integer>();
 
@@ -11,11 +11,12 @@ int sum = list.stream()     // streamの機能を使う
           .sum();
 ```
 
-## 最大値
+## 最大値/最小値
+※最小値はmax⇒minにするだけなので省略
 
 - **方法１**
 ```java
-import.util.*;
+import java.util.*;
 
 List<Integer> list = new ArrayList<Integer>();
 
@@ -27,9 +28,18 @@ int max = list.stream()     // streamの機能を使う
 
 - **方法２**
 ```java
-import.util.*;
+import java.util.*;
 
 List<Integer> list = new ArrayList<Integer>();
 
-int max = Collections.max(list)
+int max = Collections.max(list);
+```
+
+## 最大値/最小値のインデックス
+```java
+import java.util.*;
+
+List<Integer> list = new ArrayList<Integer>();
+
+int max = list.indexOf(Collections.max(list));
 ```
