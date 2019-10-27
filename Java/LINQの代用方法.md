@@ -90,6 +90,19 @@ List<Integer> result = list.stream()                         // stream機能を�
                              .collect(Collectors.toList());  // List型に変換
 ```
 
+## 任意の条件順に並び替え(LINQのOrderByにあたる)
+```java
+import java.util.*;
+
+List<Integer> list = new ArrayList<Integer>();
+
+// 降順に並び替え
+List<Integer> result = list.stream()                         // stream機能を使う
+                             .sorted((x, y) -> y - x)        // 並べ替え条件を入力(->の右側の計算結果が0より大きい場合に並び替え)
+                             .collect(Collectors.toList());  // List型に変換
+
+
+```
 
 
 # 参考
