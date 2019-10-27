@@ -2,6 +2,9 @@ C#のLINQの機能をJavaで実現する方法
 
 # 目次
 - [合計値](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E5%90%88%E8%A8%88%E5%80%A4int)
+- [最大値/最小値](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E6%9C%80%E5%A4%A7%E5%80%A4%E6%9C%80%E5%B0%8F%E5%80%A4)
+- [最大値/最小値のインデックス]()
+- [抽出]()
 
 ## 合計値(int)
 ```java
