@@ -1,7 +1,7 @@
 C#のLINQの機能をJavaで実現する方法
 
 # 目次
-[合計値](##合計値(int))
+- [合計値](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E5%90%88%E8%A8%88%E5%80%A4int)
 
 ## 合計値(int)
 ```java
