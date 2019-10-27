@@ -51,9 +51,9 @@ import java.util.*;
 List<Integer> list = new ArrayList<Integer>();
 
 // 偶数のみのリストを抽出する
-List<Integer> evenList = list.stream()
-                             .filter(x -> x % 2 == 0)
-                             .collect(Collectors.toList());
+List<Integer> evenList = list.stream()                       // streamの機能を使う
+                             .filter(x -> x % 2 == 0)        // 条件を入力
+                             .collect(Collectors.toList());  // List型に変換
 
 ```
 
