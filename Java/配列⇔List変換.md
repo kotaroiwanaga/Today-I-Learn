@@ -30,7 +30,7 @@ List<String> list = Arrays.asList(array);
 
 ### 注意点
 #### 1. List<T>のTはオブジェクト型のみ有効
-オブジェクト型のリストList<Intenger>は作れても、プリミティブ型のリストList<int>は作れないので気を付ける。  
+オブジェクト型のリストList<Intenger>は作れても、**プリミティブ型のリストList<int>は作れない**ので気を付ける。  
 特に下記のようにList<T>型に格納しないような使い方をすると、エラーは出ないのに思いもよらない動作をすることがあるので注意。
 
 ```java
@@ -43,7 +43,7 @@ int index = Arrays.asList(array).indexOf(1);
 ```
   
 #### 2. そのままではサイズが変更できない
-add()やremove()などはArrayListでないと利用できないので、List⇒ArrayListに変換する必要がある。
+**add()やremove()などはArrayListでないと利用できない**ので、List⇒ArrayListに変換する必要がある。
 ```java
 import java.util.*;
 
