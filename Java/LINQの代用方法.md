@@ -8,7 +8,7 @@ C#のLINQの機能をJavaで実現する方法
 - [射影](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E5%B0%84%E5%BD%B1%E5%90%84%E8%A6%81%E7%B4%A0%E3%81%AB%E5%90%8C%E3%81%98%E5%87%A6%E7%90%86%E3%82%92%E6%96%BD%E3%81%97%E3%81%9F%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8Blinq%E3%81%AEselect%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8B)
 - [並び替え(昇順)](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E8%87%AA%E7%84%B6%E9%A0%86%E5%BA%8F%E6%98%87%E9%A0%86%E3%81%AB%E4%B8%A6%E3%81%B3%E6%9B%BF%E3%81%88)
 - [並び替え(任意の条件)](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E4%BB%BB%E6%84%8F%E3%81%AE%E6%9D%A1%E4%BB%B6%E9%A0%86%E3%81%AB%E4%B8%A6%E3%81%B3%E6%9B%BF%E3%81%88linq%E3%81%AEorderby%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8B)
-
+- [要素数]()
 
 ## 合計値(int)
 ```java
@@ -107,6 +107,16 @@ List<Integer> result = list.stream()                         // stream機能を�
                              .collect(Collectors.toList());  // List型に変換
 
 
+```
+
+## 要素数(LINQのCountにあたる)
+```java
+import java.util.*;
+
+List<Integer> list = new ArrayList<Integer>();
+
+long cnt = list.stream() // stream機能を使う
+               .count(); // 戻り値がlongであることに注意
 ```
 
 
