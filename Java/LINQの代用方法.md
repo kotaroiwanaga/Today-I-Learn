@@ -57,6 +57,7 @@ int max = list.indexOf(Collections.max(list));
 ## 抽出：条件に合う要素だけのリストを作る（LINQのWhereにあたる）
 ```java
 import java.util.*;
+import java.util.stream.Collectors;
 
 List<Integer> list = new ArrayList<Integer>();
 
@@ -70,6 +71,7 @@ List<Integer> evenList = list.stream()                       // streamの機能�
 ## 射影：各要素に同じ処理を施したリストを作る(LINQのSelectにあたる)
 ```java
 import java.util.*;
+import java.util.stream.Collectors;
 
 List<Integer> list = new ArrayList<Integer>();
 
@@ -83,6 +85,7 @@ List<Integer> result = list.stream()                 // stream機能を使う
 ## 自然順序(昇順)に並び替え
 ```java
 import java.util.*;
+import java.util.stream.Collectors;
 
 List<Integer> list = new ArrayList<Integer>();
 
@@ -94,6 +97,7 @@ List<Integer> result = list.stream()                         // stream機能を�
 ## 任意の条件順に並び替え(LINQのOrderByにあたる)
 ```java
 import java.util.*;
+import java.util.stream.Collectors;
 
 List<Integer> list = new ArrayList<Integer>();
 
