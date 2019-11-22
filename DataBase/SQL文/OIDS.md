@@ -22,3 +22,7 @@ CREATE TABLE xxx
 
 #### WITHOUT OIDS
 ⇒オブジェクト識別子を主キーに使用しない
+
+## 参考
+https://www.postgresql.jp/document/8.0/html/datatype-oid.html
+http://tak-lab.net/2015/10/postgres-without-oids-%E3%81%A8%E3%81%AF%EF%BC%9F/
