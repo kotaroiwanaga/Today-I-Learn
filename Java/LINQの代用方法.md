@@ -119,6 +119,17 @@ long cnt = list.stream() // stream機能を使う
                .count(); // 戻り値がlongであることに注意
 ```
 
+## 重複をなくす(LINQのDistinctにあたる)
+```java
+import java.util.*;
+
+List<Integer> list = new ArrayList<Integer>();
+
+List<Integer> result = list.stream()
+                       .distinct()
+                       .collect(Collectors.toList());
+```
+
 
 # 参考
 Listのメソッド  
