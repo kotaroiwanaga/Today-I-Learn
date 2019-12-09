@@ -9,7 +9,7 @@ C#のLINQの機能をJavaで実現する方法
 - [並び替え(昇順)](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E8%87%AA%E7%84%B6%E9%A0%86%E5%BA%8F%E6%98%87%E9%A0%86%E3%81%AB%E4%B8%A6%E3%81%B3%E6%9B%BF%E3%81%88)
 - [並び替え(任意の条件)](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E4%BB%BB%E6%84%8F%E3%81%AE%E6%9D%A1%E4%BB%B6%E9%A0%86%E3%81%AB%E4%B8%A6%E3%81%B3%E6%9B%BF%E3%81%88linq%E3%81%AEorderby%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8B)
 - [要素数](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E8%A6%81%E7%B4%A0%E6%95%B0linq%E3%81%AEcount%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8B)
-- [重複をなくす]()
+- [重複をなくす](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E9%87%8D%E8%A4%87%E3%82%92%E3%81%AA%E3%81%8F%E3%81%99linq%E3%81%AEdistinct%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8B)
 
 ## 合計値(int)
 ```java
