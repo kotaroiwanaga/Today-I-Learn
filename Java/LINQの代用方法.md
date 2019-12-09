@@ -21,6 +21,7 @@ int sum = list.stream()     // streamの機能を使う
           .mapToInt(x -> x) // Integer → int に変換
           .sum();
 ```
+[目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
 
 ## 最大値/最小値
 ※最小値はmax⇒minにするだけなので省略
