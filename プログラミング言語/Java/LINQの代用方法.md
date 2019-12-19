@@ -21,7 +21,7 @@ int sum = list.stream()     // streamの機能を使う
           .mapToInt(x -> x) // Integer → int に変換
           .sum();
 ```
-[目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
+[目次に戻る](#目次)
 
 ## 最大値/最小値
 ※最小値はmax⇒minにするだけなので省略
@@ -46,7 +46,7 @@ List<Integer> list = new ArrayList<Integer>();
 
 int max = Collections.max(list);
 ```
-[目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
+[目次に戻る](#目次)
 
 ## 最大値/最小値のインデックス
 ```java
@@ -56,7 +56,7 @@ List<Integer> list = new ArrayList<Integer>();
 
 int max = list.indexOf(Collections.max(list));
 ```
-[目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
+[目次に戻る](#目次)
 
 ## 抽出：条件に合う要素だけのリストを作る（LINQのWhereにあたる）
 ```java
@@ -71,7 +71,7 @@ List<Integer> evenList = list.stream()                       // streamの機能�
                              .collect(Collectors.toList());  // List型に変換
 
 ```
-[目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
+[目次に戻る](#目次)
 
 ## 射影：各要素に同じ処理を施したリストを作る（LINQのSelectにあたる）
 ```java
@@ -86,7 +86,7 @@ List<Integer> result = list.stream()                 // stream機能を使う
                      .collect(Collectors.toList());  // List型に変換
         
 ```
-[目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
+[目次に戻る](#目次)
 
 ## 自然順序（昇順）に並び替え
 ```java
@@ -99,7 +99,7 @@ List<Integer> result = list.stream()                         // stream機能を�
                              .sorted()
                              .collect(Collectors.toList());  // List型に変換
 ```
-[目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
+[目次に戻る](#目次)
 
 ## 任意の条件順に並び替え（LINQのOrderByにあたる）
 ```java
@@ -114,7 +114,7 @@ List<Integer> result = list.stream()                         // stream機能を�
                              .collect(Collectors.toList());  // List型に変換
 
 ```
-[目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
+[目次に戻る](#目次)
 
 ## 要素数（LINQのCountにあたる）
 ```java
@@ -125,7 +125,7 @@ List<Integer> list = new ArrayList<Integer>();
 long cnt = list.stream() // stream機能を使う
                .count(); // 戻り値がlongであることに注意
 ```
-[目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
+[目次に戻る](#目次)
 
 ## 重複をなくす（LINQのDistinctにあたる）
 ```java
@@ -139,7 +139,7 @@ List<Integer> result = list.stream()
 ```
 ※要素の型に不変でないオブジェクトを使う場合は注意 ⇒[参考：distinctの罠]()
 
-[目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
+[目次に戻る](#目次)
 
 
 # 参考
