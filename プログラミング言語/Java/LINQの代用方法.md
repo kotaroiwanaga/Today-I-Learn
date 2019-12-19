@@ -137,7 +137,7 @@ List<Integer> result = list.stream()
                        .distinct()
                        .collect(Collectors.toList());
 ```
-※要素の型に不変でないオブジェクトを使う場合は注意 ⇒[参考：distinctの罠]()
+※要素の型に不変でないオブジェクトを使う場合は注意 ⇒[参考：distinctの罠](stream().distinct()の罠.md)
 
 [目次に戻る](#目次)
 
