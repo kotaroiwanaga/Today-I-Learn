@@ -2,14 +2,14 @@ C#のLINQの機能をJavaで実現する方法
 
 # 目次
 - [合計値](#合計値)
-- [最大値/最小値](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E6%9C%80%E5%A4%A7%E5%80%A4%E6%9C%80%E5%B0%8F%E5%80%A4)
-- [最大値/最小値のインデックス](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E6%9C%80%E5%A4%A7%E5%80%A4%E6%9C%80%E5%B0%8F%E5%80%A4%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9)
-- [抽出](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E6%8A%BD%E5%87%BA%E6%9D%A1%E4%BB%B6%E3%81%AB%E5%90%88%E3%81%86%E8%A6%81%E7%B4%A0%E3%81%A0%E3%81%91%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8Blinq%E3%81%AEwhere%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8B)
-- [射影](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E5%B0%84%E5%BD%B1%E5%90%84%E8%A6%81%E7%B4%A0%E3%81%AB%E5%90%8C%E3%81%98%E5%87%A6%E7%90%86%E3%82%92%E6%96%BD%E3%81%97%E3%81%9F%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8Blinq%E3%81%AEselect%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8B)
-- [並び替え(昇順)](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E8%87%AA%E7%84%B6%E9%A0%86%E5%BA%8F%E6%98%87%E9%A0%86%E3%81%AB%E4%B8%A6%E3%81%B3%E6%9B%BF%E3%81%88)
-- [並び替え(任意の条件)](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E4%BB%BB%E6%84%8F%E3%81%AE%E6%9D%A1%E4%BB%B6%E9%A0%86%E3%81%AB%E4%B8%A6%E3%81%B3%E6%9B%BF%E3%81%88linq%E3%81%AEorderby%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8B)
-- [要素数](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E8%A6%81%E7%B4%A0%E6%95%B0linq%E3%81%AEcount%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8B)
-- [重複をなくす](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E9%87%8D%E8%A4%87%E3%82%92%E3%81%AA%E3%81%8F%E3%81%99linq%E3%81%AEdistinct%E3%81%AB%E3%81%82%E3%81%9F%E3%82%8B)
+- [最大値/最小値](#最大値最小値)
+- [最大値/最小値のインデックス](#最大値最小値のインデックス)
+- [抽出](#抽出：条件に合う要素だけのリストを作る（LINQのWhereにあたる）)
+- [射影](#)
+- [並び替え(昇順)](#)
+- [並び替え(任意の条件)](#)
+- [要素数](#)
+- [重複をなくす](#)
 
 ## 合計値
 ```java
@@ -73,7 +73,7 @@ List<Integer> evenList = list.stream()                       // streamの機能�
 ```
 [目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
 
-## 射影：各要素に同じ処理を施したリストを作る(LINQのSelectにあたる)
+## 射影：各要素に同じ処理を施したリストを作る（LINQのSelectにあたる）
 ```java
 import java.util.*;
 import java.util.stream.Collectors;
@@ -88,7 +88,7 @@ List<Integer> result = list.stream()                 // stream機能を使う
 ```
 [目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
 
-## 自然順序(昇順)に並び替え
+## 自然順序（昇順）に並び替え
 ```java
 import java.util.*;
 import java.util.stream.Collectors;
@@ -101,7 +101,7 @@ List<Integer> result = list.stream()                         // stream機能を�
 ```
 [目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
 
-## 任意の条件順に並び替え(LINQのOrderByにあたる)
+## 任意の条件順に並び替え（LINQのOrderByにあたる）
 ```java
 import java.util.*;
 import java.util.stream.Collectors;
@@ -116,7 +116,7 @@ List<Integer> result = list.stream()                         // stream機能を�
 ```
 [目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
 
-## 要素数(LINQのCountにあたる)
+## 要素数（LINQのCountにあたる）
 ```java
 import java.util.*;
 
@@ -127,7 +127,7 @@ long cnt = list.stream() // stream機能を使う
 ```
 [目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
 
-## 重複をなくす(LINQのDistinctにあたる)
+## 重複をなくす（LINQのDistinctにあたる）
 ```java
 import java.util.*;
 
@@ -137,6 +137,8 @@ List<Integer> result = list.stream()
                        .distinct()
                        .collect(Collectors.toList());
 ```
+※要素の型に不変でないオブジェクトを使う場合は注意 ⇒[参考：distinctの罠]()
+
 [目次に戻る](https://github.com/kotaroiwanaga/Today-I-Learn/blob/master/Java/LINQ%E3%81%AE%E4%BB%A3%E7%94%A8%E6%96%B9%E6%B3%95.md#%E7%9B%AE%E6%AC%A1)
 
 
