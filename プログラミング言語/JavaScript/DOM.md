@@ -5,7 +5,10 @@ HTMLのタグ構造を階層構造になったオブジェクトとして扱う�
 
 ## DOMのイメージ(思想)
 - 前述の通りHTMLのタグ構造を**階層構造\(ツリー構造\)**として捉える。  
+
 ![](https://eng-entrance.com/wp-content/uploads/2016/07/%E5%9B%B32-267x300.png)
 
+
 - 各要素(タグ)をノードと表現する。
+
 ![](https://eng-entrance.com/wp-content/uploads/2016/07/%E5%9B%B33-267x300.png)
