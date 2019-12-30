@@ -52,4 +52,5 @@ HTMLのタグ構造を階層構造になったオブジェクトとして扱う�
 
 ## 参考
 https://eng-entrance.com/what-is-dom
+
 https://www.sejuku.net/blog/30970
