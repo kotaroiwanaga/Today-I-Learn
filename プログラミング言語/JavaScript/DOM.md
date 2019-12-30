@@ -34,8 +34,22 @@ HTMLのタグ構造を階層構造になったオブジェクトとして扱う�
 
 各要素の参照方法は以下の通り
 ```JavaScript
-var span = document.div
+<script>
+  // id="section-1"のタグを赤にする
+  var section_1 = document.getElementById("section-1");
+  section_1.style.color = 'red';
+
+  // id="section-1"のタグの子ノードのうち、2番目の要素を黄色にする
+  /* ※ChromeブラウザのchildNodesの実装が、ノードとノードの間に「空白のノード」を差し込むものになっているため、 h2, 空白, p の順となり指定する添え字は 3 となる*/
+  var section_1ChildeList = section_1.childNodes;
+  section_1ChildeList[3].style.color = 'yellow';
+
+  // name="p_1"のタグのうち1番目のものを青色にする
+  var p_1List = document.getElementsByName("p_1");
+  p_1List[1].style.color = 'blue';
+</script>
 ```
 
 ## 参考
 https://eng-entrance.com/what-is-dom
+https://www.sejuku.net/blog/30970
