@@ -6,7 +6,7 @@ C#, Java共通の仕様なのだが、Object.equals()はデフォルトでは同
   不変オブジェクトと同じようにequalsと同じように使用すると思ってもみない結果が出るかも。
 - C#はLINQが充実してるからまだいいが、Javaのstream()などを使って新しくCollectionを作成する際に  
 　要素同士の比較にequals()が使われている場合があるため注意が必要。  
-  ⇒参考 [stream().distinct()の罠](/Java/コレクション/[stream().distinct()の罠.md)
+  ⇒参考 [stream().distinct()の罠](./Java/コレクション/[stream().distinct()の罠.md)
 
 ## 参考
 Java のequals  
