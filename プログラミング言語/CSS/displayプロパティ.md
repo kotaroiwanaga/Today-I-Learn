@@ -7,7 +7,7 @@
 
 # displayプロパティとは
 要素の表示形式を指定することができる、CSSの中でも極めて重要なプロパティ値。要素の種類によって初期値が異なり、ほとんどの要素がblock(ブロックレベル要素)かinline(インライン要素)のいずれかを初期値に持つ。
-
+  
 [目次に戻る](#目次)
 
 # 主なプロパティ値
@@ -15,10 +15,16 @@
 
 ## display: none;
 
+[目次に戻る](#目次)  
+
 ## display: block;
+
+[目次に戻る](#目次)  
 
 # 参考
 - あなたはCSSプロパティ”display”をどのぐらい知っているだろうか？  
 https://postd.cc/how-well-do-you-know-display/#those-we-know-quite-well-already
 - スタイルシートリファレンス display  
 http://www.htmq.com/style/display.shtml
+
+[目次に戻る](#目次)  
