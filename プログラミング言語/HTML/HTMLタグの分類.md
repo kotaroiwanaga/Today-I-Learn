@@ -62,5 +62,7 @@ HTMLの各要素は「ブロックレベル要素」と「インライン要素�
 http://markup.webcrew.co.jp/art_20140930.html
 - ブロック要素、インライン要素の違いを理解しよう  
 https://reffect.co.jp/html/block_and_inline_understanding  
-  
+- ボックス(margin, border, padding)について
+https://blog.codecamp.jp/margin_padding  
+
 [目次に戻る](#目次)
