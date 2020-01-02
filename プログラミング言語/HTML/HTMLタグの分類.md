@@ -55,6 +55,7 @@ HTMLの各要素は「ブロックレベル要素」と「インライン要素�
 
 ★margin(外側の余白)：境界線より外側の余白(ほかの要素との間の余白)  
 ★padding(内側の余白)：境界線より内側の余白(境界線とコンテンツ間の余白)  
+![](https://s3-ap-northeast-1.amazonaws.com/mash-jp/staging/uploads/3401/e81de1a5939d1f8df32f06d1e5357fff601096b4.3457.original.png?1488165207)  
 
 [目次に戻る](#目次)
 
