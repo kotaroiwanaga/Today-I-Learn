@@ -1,8 +1,8 @@
 # 目次
 1. [displayプロパティとは](#displayプロパティとは)
 2. [主なプロパティ値](#主なプロパティ値)  
-  1. [display: none;](#displaynone)
-  2. [display: block;](#displayblock)
+    1. [display: none;](#displaynone)
+    2. [display: block;](#displayblock)
 3. [参考](#参考)
 
 # displayプロパティとは
