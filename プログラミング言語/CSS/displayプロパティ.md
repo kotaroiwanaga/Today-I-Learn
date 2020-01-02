@@ -1,8 +1,8 @@
 # 目次
 1. [displayプロパティとは](#displayプロパティとは)
-2. [主なプロパティ値](#主なプロパティ値)
-  1. [display:none;](#displaynone)
-  
+2. [主なプロパティ値](#主なプロパティ値)  
+  1. [display: none;](#displaynone)
+  2. [display: block;](#displayblock)
 3. [参考](#参考)
 
 # displayプロパティとは
@@ -11,7 +11,9 @@
 # 主なプロパティ値
 比較的使用率の高いものだけを紹介する。
 
-## display:none;
+## display: none;
+
+## display: block;
 
 # 参考
 - あなたはCSSプロパティ”display”をどのぐらい知っているだろうか？  
