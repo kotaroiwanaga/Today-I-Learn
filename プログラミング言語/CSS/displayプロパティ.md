@@ -2,12 +2,12 @@
 1. [displayプロパティとは](#displayプロパティとは)
 2. [主なプロパティ値](#主なプロパティ値)  
     1. [display: none;](#display-none)
-    2. [display: block;](#displayblock)
-    3. [display: inline;](#displayinline)
-    4. [display: inline-block;](#displayinline-block)
-    5. [display: list-item;](#displaylist-item)
+    2. [display: block;](#display-block)
+    3. [display: inline;](#display-inline)
+    4. [display: inline-block;](#display-inline-block)
+    5. [display: list-item;](#display-list-item)
     6. [テーブルベースのレイアウト](#テーブルベースのレイアウト)
-    7. [display: flex;](#displayflex)
+    7. [display: flex;](#display-flex)
 3. [参考](#参考)
 
 # displayプロパティとは
