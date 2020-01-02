@@ -8,6 +8,7 @@
     5. [display: list-item;](#display-list-item)
     6. [テーブルベースのレイアウト](#テーブルベースのレイアウト)
     7. [display: flex;](#display-flex)
+    8. [display: grid;](#display-grid)
 3. [参考](#参考)
 
 # displayプロパティとは
@@ -56,7 +57,11 @@ tableのような振る舞いをさせるプロパティ値。`display: table;`�
 
 [目次に戻る](#目次)   
 
-
+## display: grid;
+flexコンテナの概要と同じく、この値を指定した要素はグリッド要素となり、その子要素はgridアイテムとなる(孫要素までは拡張されない)。flexやtableが一次元的なレイアウトなのに対し、gridは二次元的なレイアウトが可能。
+参考⇒ https://qiita.com/fgkm/items/ef5ab77ba8eaf4f5200f
+  
+[目次に戻る](#目次)   
 
 
 # 参考
