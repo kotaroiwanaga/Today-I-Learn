@@ -1,7 +1,7 @@
 # 目次
 1. [displayプロパティとは](#displayプロパティとは)
 2. [主なプロパティ値](#主なプロパティ値)  
-    1. [display: none;](#displaynone)
+    1. [display: none;](#display-none)
     2. [display: block;](#displayblock)
     3. [display: inline;](#displayinline)
     4. [display: inline-block;](#displayinline-block)
