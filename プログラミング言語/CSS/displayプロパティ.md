@@ -5,6 +5,9 @@
     2. [display: block;](#displayblock)
     3. [display: inline;](#displayinline)
     4. [display: inline-block;](#displayinline-block)
+    5. [display: list-item;](#displaylist-item)
+    6. [テーブルベースのレイアウト](#テーブルベースのレイアウト)
+    7. [display: flex;](#displayflex)
 3. [参考](#参考)
 
 # displayプロパティとは
@@ -35,7 +38,26 @@
 ## display: inline-block;
 ボックス内部はブロックレベル要素として扱われ、ボックス外部からはインライン要素として扱われる。  
 
+[目次に戻る](#目次)   
+  
+## display: list-item;
+li要素に初期値として割り当てられているプロパティ値。li要素をのdisplayプロパティ値を変更した後に戻す際はこの値を設定する。
+  
 [目次に戻る](#目次)    
+
+## テーブルベースのレイアウト
+tableのような振る舞いをさせるプロパティ値。`display: table;`や`display: table-row;`などがある。
+  
+[目次に戻る](#目次)    
+
+## display: flex;
+この値を指定した要素はflexコンテナとなり、その子要素はflexアイテムとなる(孫要素までは拡張されない)。「flex」とは「融通が利く」という意味であり、flexアイテムに様々な種類の並列レイアウトを適用させることができる。flexコンテナには専用のプロパティを設定することができ、これを使って様々な並列レイアウトを適用する。  
+参考⇒ https://liginc.co.jp/web/html-css/css/21024/2
+
+[目次に戻る](#目次)   
+
+
+
 
 # 参考
 - あなたはCSSプロパティ”display”をどのぐらい知っているだろうか？  
