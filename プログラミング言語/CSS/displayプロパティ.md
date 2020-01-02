@@ -2,11 +2,19 @@
 1. [displayプロパティとは](#displayプロパティとは)
 2. [主なプロパティ値](#主なプロパティ値)
   1. [display:none;](#displaynone)
+  
+3. [参考](#参考)
 
 # displayプロパティとは
-要素の表示形式を指定することができる。要素の種類によって初期値が異なり、ほとんど要素がblock(ブロックレベル要素)かinline(インライン要素)のいずれかを初期値に持つ。
+要素の表示形式を指定することができる、CSSの中でも極めて重要なプロパティ値。要素の種類によって初期値が異なり、ほとんど要素がblock(ブロックレベル要素)かinline(インライン要素)のいずれかを初期値に持つ。
 
 # 主なプロパティ値
 比較的使用率の高いものだけを紹介する。
 
 ## display:none;
+
+# 参考
+- あなたはCSSプロパティ”display”をどのぐらい知っているだろうか？  
+https://postd.cc/how-well-do-you-know-display/#those-we-know-quite-well-already
+- スタイルシートリファレンス display  
+http://www.htmq.com/style/display.shtml
