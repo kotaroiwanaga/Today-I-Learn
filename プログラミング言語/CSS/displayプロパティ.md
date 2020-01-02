@@ -3,6 +3,7 @@
 2. [主なプロパティ値](#主なプロパティ値)  
     1. [display: none;](#displaynone)
     2. [display: block;](#displayblock)
+    3. [display: inline;](#displayinline)
 3. [参考](#参考)
 
 # displayプロパティとは
@@ -23,6 +24,11 @@
 詳しくは⇒ [HTMLタグの分類](../HTML/HTMLタグの分類.md#ブロックレベル要素)
 
 [目次に戻る](#目次)  
+
+## display: inline;
+インライン要素として扱う。行内の一部とみなされるため、要素の前後に改行は入らず、表示領域のサイズは内包コンテンツに従うため、変更できない。
+[目次に戻る](#目次)    
+詳しくは⇒ [HTMLタグの分類](../HTML/HTMLタグの分類.md#インライン要素)
 
 # 参考
 - あなたはCSSプロパティ”display”をどのぐらい知っているだろうか？  
