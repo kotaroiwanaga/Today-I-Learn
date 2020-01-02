@@ -70,5 +70,7 @@ http://markup.webcrew.co.jp/art_20140930.html
 https://reffect.co.jp/html/block_and_inline_understanding  
 - ボックス(margin, border, padding)について
 https://blog.codecamp.jp/margin_padding  
+- ブロックレベル要素とインライン要素の違い
+https://web-firstlog.com/12-24-block-inline/  
 
 [目次に戻る](#目次)
