@@ -14,5 +14,5 @@ letはconstとともにvarの問題点を解決すべく追加されたもので
 定数を扱いたいならconst,変数を扱いたいならletを使うべき。
 
 ## 参考
-
+https://codezine.jp/article/detail/11353
 
