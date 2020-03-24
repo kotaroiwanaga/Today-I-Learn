@@ -12,6 +12,7 @@
 
 ## Controllerの設計ルール
 - @ControllerをクラスにつけるだけでControllerクラスとして認識される。
+- ただし、Spring設定ファイルにこのアノテーションを有効にする記述(mvc'annotation-driven, context:component-scan)が必要。
 - 処理メソッドの引数にモデル(リクエストから受け取りたいデータ)を設定できる。
   - 指定するとリクエストパラメータをそのモデルの型にバインドして引数に渡してくれる。
   - 引数をModelにaddしてくれる。
