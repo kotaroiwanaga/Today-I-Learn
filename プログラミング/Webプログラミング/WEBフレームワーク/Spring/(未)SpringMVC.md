@@ -78,7 +78,7 @@ Springのバインドは、セキュリティとDAOの両方に要求される�
 ## 通常のControllerの処理の流れ
 1. **@ModelAttributeの呼び出し**  
      事前準備として、dbからPOJOを取得し、Modelに登録する。  
-     ただし、""InitBinderメソッドで設定した名前のPOJOしかModelには設定できない**。  
+     ただし、**InitBinderメソッドで設定した名前のPOJOしかModelには設定できない**。  
      このInitBinderの仕組みによって、不要なパラメータ無視することでセキュリティが確保されている。  
      ModelAttributeメソッドは**リクエストのたびにRequestMappingメソッドの前に呼ばれる**。
 2. **@RequestMappingの呼び出し**  
