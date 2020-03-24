@@ -81,8 +81,9 @@ Springのバインドは、セキュリティとDAOの両方に要求される�
      このInitBinderの仕組みによって、不要なパラメータ無視することでセキュリティが確保されている。  
      ModelAttributeメソッドは**リクエストのたびにRequestMappingメソッドの前に呼ばれる**。
 2. **@RequestMappingの呼び出し**  
-     ModelからPOJOを取り出して、画面処理を行う。  
-     指定したPOJOがModelに**登録されていない場合は、新たにnewしてModelに登録する**。
+     ModelからPOJOを取り出して、コントロール処理を行う。  
+     指定したPOJOがModelに**登録されていない場合は、新たにnewしてModelに登録する**。  
+     コントロール処理がreturnした値はView名としてSpringが処理する。  
 
 ※POJO：単純な構造のJavaオブジェクトのこと。ただのデータクラスとか。  
 ※@InitBinderは引数のモデルの数だけ呼ばれる。(モデルにバインドするたびに呼ばれるので)
