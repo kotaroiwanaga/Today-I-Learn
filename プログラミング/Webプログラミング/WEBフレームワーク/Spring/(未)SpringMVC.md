@@ -89,5 +89,24 @@ Springのバインドは、セキュリティとDAOの両方に要求される�
 ※POJO：単純な構造のJavaオブジェクトのこと。ただのデータクラスとか。  
 ※@InitBinderは引数のモデルの数だけ呼ばれる。(モデルにバインドするたびに呼ばれるので)
 
+## Controller内で使う主なアノテーション
+### @Controller
+このアノテーションをつけたクラスをControllerとして扱う。  
+ただし、Spring設定ファイルにこのアノテーションを有効にする記述(mvc:annotation-driven, context:component-scan)  
+をしなければならない。
+
+### @InitBinder
+Binderを初期化する。リクエストパラメータをモデルに変換するたびに呼ばれる。  
+また、setAllowedFields()メソッドで設定を許可するプロパティを指定できる。  
+逆に許可しないプロパティを設定することもできる。
+
+### @ModerlAtttribute("【モデルオブジェクト名】")
+#### メソッドにつけた場合
+モデル前処理ができる。  
+@RequestParamを使ってリクエストパラメータの値を引数に取り、  
+この値を使ってPOJOを作成し、Modelに登録できる。
+returnしたものがModelに登録される。
+
+#### 引数につけた場合
 
 
