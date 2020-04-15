@@ -172,3 +172,6 @@ https://futurismo.biz/archives/3987/#%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AE%E5%90%
 
 LINQ to Objects と Java8-Stream API と Kotlin の対応表  
 https://qiita.com/amay077/items/9d2941283c4a5f61f302
+
+自作クラス型のリストをメンバ変数で並び替え  
+http://lovedvoraklayout.hatenablog.com/entry/java-object-sort
