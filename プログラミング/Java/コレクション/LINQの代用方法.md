@@ -7,6 +7,7 @@ C#のLINQの機能をJavaで実現する方法
 - [抽出](#抽出条件に合う要素だけのリストを作るLINQのWhereにあたる)
 - [射影](#射影各要素に同じ処理を施したリストを作るLINQのSelectにあたる)
 - [並び替え(昇順)](#自然順序昇順に並び替え)
+- [並び替え(自作クラス)](#自作オブジェクトのメンバ変数で並び替え)
 - [並び替え(任意の条件)](#任意の条件順に並び替えLINQのOrderByにあたる)
 - [要素数](#要素数LINQのCountにあたる)
 - [重複をなくす](#重複をなくすLINQのDistinctにあたる)
@@ -98,6 +99,23 @@ List<Integer> list = new ArrayList<Integer>();
 List<Integer> result = list.stream()                         // stream機能を使う
                              .sorted()
                              .collect(Collectors.toList());  // List型に変換
+```
+[目次に戻る](#目次)
+
+## 自作オブジェクトのメンバ変数で並び替え
+```java
+List<Point> list = new ArrayList<Point>();
+
+// メンバ変数xでソート
+list.sort(Comparator.comparing(Point::getX));
+
+//yで降順ソート
+list.sort(Comparator.comparing(Point::getY).reversed());
+
+//xで昇順ソート、xが同じ場合はyで降順ソート、yも同じ場合はcolorで昇順ソート
+list.sort(Comparator.comparing(Point::getX)
+		.thenComparing(Point::getY).reversed()
+		.thenComparing(Point::getColor));
 ```
 [目次に戻る](#目次)
 
