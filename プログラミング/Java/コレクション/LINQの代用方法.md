@@ -70,6 +70,8 @@ Point max = list.stream()
 		.get();
 ```
 
+[目次に戻る](#目次)
+
 ## 抽出：条件に合う要素だけのリストを作る（LINQのWhereにあたる）
 ```java
 import java.util.*;
