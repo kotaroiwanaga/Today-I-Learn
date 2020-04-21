@@ -188,3 +188,6 @@ https://qiita.com/amay077/items/9d2941283c4a5f61f302
 
 自作クラス型のリストをメンバ変数で並び替え  
 http://lovedvoraklayout.hatenablog.com/entry/java-object-sort
+
+JavaのStream終端処理
+https://qiita.com/motoki1990/items/e62d8264268d862ae3ba
