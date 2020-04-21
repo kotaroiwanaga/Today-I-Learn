@@ -4,10 +4,11 @@ C#のLINQの機能をJavaで実現する方法
 - [合計値](#合計値)
 - [最大値/最小値](#最大値最小値)
 - [最大値/最小値のインデックス](#最大値最小値のインデックス)
+- [最大値/最小値(オブジェクトのメンバ変数)](#最大値最小値オブジェクトのメンバ変数)
 - [抽出](#抽出条件に合う要素だけのリストを作るLINQのWhereにあたる)
 - [射影](#射影各要素に同じ処理を施したリストを作るLINQのSelectにあたる)
 - [並び替え(昇順)](#自然順序昇順に並び替え)
-- [並び替え(自作クラス)](#自作オブジェクトのメンバ変数で並び替え)
+- [並び替え(自作クラス)](#オブジェクトのメンバ変数で並び替え)
 - [並び替え(任意の条件)](#任意の条件順に並び替えLINQのOrderByにあたる)
 - [要素数](#要素数LINQのCountにあたる)
 - [重複をなくす](#重複をなくすLINQのDistinctにあたる)
@@ -59,6 +60,16 @@ int max = list.indexOf(Collections.max(list));
 ```
 [目次に戻る](#目次)
 
+## 最大値/最小値(オブジェクトのメンバ変数)
+```java
+// ※Pointはint x をメンバ変数に持つ
+List<Point> list = new ArrayList<Point>();
+
+Point max = list.stream()
+                .max(Comparator.comparingInt(point -> ppoint.getX()))
+		.get();
+```
+
 ## 抽出：条件に合う要素だけのリストを作る（LINQのWhereにあたる）
 ```java
 import java.util.*;
@@ -102,7 +113,7 @@ List<Integer> result = list.stream()                         // stream機能を�
 ```
 [目次に戻る](#目次)
 
-## 自作オブジェクトのメンバ変数で並び替え
+## オブジェクトのメンバ変数で並び替え
 ```java
 List<Point> list = new ArrayList<Point>();
 
