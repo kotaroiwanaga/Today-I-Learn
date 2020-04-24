@@ -130,6 +130,16 @@ URLの親のパスにマッチする。
 引数の中のフィールドをネストしてチェックさせたい場合は、
 さらにフィールドの定義に@Validをつける必要がある。
 
+# 設定ファイル(DIコンテナ)
+## SpringMVCで用意しているクラス」
 
+　　【beanで設定するクラスの一覧】
 
-
+| 名称                        | 内容                                                         |
+| --------------------------- | ------------------------------------------------------------ |
+| handler mappings            | インターセプターとControllerの実行を担当するクラスです。通常、何も設定しなければAnnotationMethodHandlerAdapterが使用されます。 |
+| view resolvers              | View名からViewを検索するクラスです。例えばUrlBasedViewResolverを使用すると、prefix ＋ View名 ＋ suffix のJSPファイルを検索します。 |
+| locale resolver             | ロケール（例："ja"など）を設定するクラスです。               |
+| Theme resolver              | theme名を解決します。themeとは、CSSのクラス名や、イメージファイル名などを指します。使用することで、後で、一括して変更できるようにもなります。propertiesファイルに、　 background=/themes/cool/img/coolBg.jpgと記述して、JSPファイルなどで、　style="background=<spring:theme code='background'/>" のような使い方をします。 |
+| multipart file resolver     | ファイルアップロードの方法を提供します。利用したい時だけ設定すれば大丈夫です。 |
+| handler exception resolvers | 例外処理の方法を提供します。利用したい時だけ設定すれば大丈夫です。 |
