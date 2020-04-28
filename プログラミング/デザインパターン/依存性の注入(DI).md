@@ -8,6 +8,10 @@ Springに限らずフレームワーク自体がこのDIの考え方が適用さ
 
 ※再利用性の高い部品は「コンポーネント」と呼ぶ。
 
+## コンポーネントのメリット
+つづき  
+https://www.atmarkit.co.jp/ait/articles/0504/29/news022_3.html
+
 ## 参考
-依存性の注入とは
+依存性の注入とは  
 https://docs.google.com/spreadsheets/d/1Hw6orczJ0SYNTpOfYU7slmgTrrkr60e2QlkQzuh1PqY/edit?usp=sharing
