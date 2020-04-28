@@ -1,0 +1,6 @@
+とりあえずメモ
+- 依存性の注入(DI)
+- AOP
+- スプリングが担うWebアプリおける役割
+
+## 依存性の注入(DI: Dependency Injection)
