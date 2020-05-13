@@ -35,3 +35,7 @@
 
 
 ## 両者の比較
+
+## 参考
+軽量Java(DIコンテナ, O/Rマッピング)
+https://www.ulsystems.co.jp/topics/027
