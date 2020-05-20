@@ -1,7 +1,7 @@
 ## vue-cliプロジェクトのディレクトリ構造
 ```
 ./
-├─build/
+├─build/ 
 │
 ├─config/
 │
@@ -15,19 +15,41 @@
 ├─static/
 │　　　　└─.gitkeep
 │
-├─test/ //※2
+├─test/ 
 │　　　　├─e2e/
 │　　　　└─unit/
 │
-├─index.html
+├─public/
+|       └─index.html
 ├─package.json
 ├─README.md
-├─.editorconfig
-├─.eslintignore //※1
-├─.eslintrc.js //※1
 ├─.gitignore
-└─.postcssrc.js
+
 ```
+## 各ディレクトリの役割
+### build/
+webpackの設定やビルド用の設定ディレクトリ
+
+### config/
+ポートの指定等を含めた各設定ファイルを格納したディレクトリ
+
+### src/
+開発用ディレクトリ
+
+### static/
+コンポーネントに依存しない静的ファイルを格納するディレクトリ
+
+### test/
+テスト用設定ディレクトリ
+
+## 画像配置場所
+### 1. src/assets/
+コンポーネントで呼び出す画像など、モジュールに依存した素材を格納する。
+基本画像はこちらに格納する。
+
+呼び出す際はビルド前の場所を記載する。
+
+### 2. 
 
 ## 参考
 Vue-cli(webpack)解剖 ーディレクトリ構成ー  
