@@ -40,7 +40,43 @@ OVER句になにも指定しなければ全行が集計対象になる。
 - [Window (Frame)指定](#Window)
 
 ### Partition By
+ 対象をグループ別に区切ることができる。まさにGroup By付きの集合関数がそれぞれの行で実行されたイメージ。
 
+```sql
+-- 集合関数
+SELECT
+  name, COUNT(*)
+FROM
+  tb_test
+GROUP BY
+  item
+
+NAME       COUNT(*)
+-------------------
+Apple            3
+Banana           2
+```
+
+```sql
+-- 分析関数
+SELECT 
+  id, 
+  name,
+  COUNT(*)
+    OVER(PARTITION BY name) AS COUNT(*)
+FROM
+  tb_test
+ORDER BY 
+  id
+
+ID   NAME     COUNT(*)
+---------------------- 
+ 1   Apple          3
+ 2   Banana         2
+ 3   Banana         2
+ 4   Apple          3
+ 5   Apple          3
+```
 ### Order By
 
 ### Window
