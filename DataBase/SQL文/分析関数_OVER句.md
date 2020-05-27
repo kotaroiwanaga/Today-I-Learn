@@ -105,6 +105,9 @@ ID   NAME     COUNT(*)
 ```
 
 ### Window
+Order By句のオプションみたいなもので、集計対象のFROMとTOを指定できる。
+したがってWINDOW指定するときは必ずOrder By句が必要になる。
+
 ## 参考
 - 分析関数（ウインドウ関数）をわかりやすく説明してみた  
 https://qiita.com/tlokweng/items/fc13dc30cc1aa28231c5
