@@ -108,6 +108,17 @@ ID   NAME     COUNT(*)
 Order By句のオプションみたいなもので、集計対象のFROMとTOを指定できる。
 したがってWINDOW指定するときは必ずOrder By句が必要になる。
 
+Order By句の説明にあった「行を順番に並べた上で、最初の行から現在行までのみを集計の対象とする」は
+Window指定を省略したデフォルトの動作である。
+
+集計対象の範囲指定方法には以下の2種類がある。
+- [Rows](#Rows)
+- [Range](#Range)
+
+### Rows
+
+### Range
+
 ## 参考
 - 分析関数（ウインドウ関数）をわかりやすく説明してみた  
 https://qiita.com/tlokweng/items/fc13dc30cc1aa28231c5
