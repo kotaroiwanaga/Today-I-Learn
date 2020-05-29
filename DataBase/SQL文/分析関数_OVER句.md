@@ -35,8 +35,8 @@ FROM
 OVER句では以下の３つの方法で集計対象の範囲指定ができる。  
 OVER句になにも指定しなければ全行が集計対象になる。
 
-- [Partition By指定](#PartitionBy)
-- [Order By指定](#OrderBy)
+- [Partition By指定](#Partition_By)
+- [Order By指定](#Order_By)
 - [Window (Frame)指定](#Window)
 
 ### Partition By
