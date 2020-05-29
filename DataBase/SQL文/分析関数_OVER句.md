@@ -35,8 +35,8 @@ FROM
 OVER句では以下の３つの方法で集計対象の範囲指定ができる。  
 OVER句になにも指定しなければ全行が集計対象になる。
 
-- [Partition By指定](#Partition_By)
-- [Order By指定](#Order_By)
+- [Partition By指定](#Partition-By)
+- [Order By指定](#Order-By)
 - [Window (Frame)指定](#Window)
 
 ### Partition By
@@ -115,7 +115,34 @@ Window指定を省略したデフォルトの動作である。
 - [Rows](#Rows)
 - [Range](#Range)
 
+書き方は以下のどちらかとなる。終了点を省略した場合は終了点は現在行となる。
+- ROWS/RANGE <開始点>
+- ROWS/RANGE BETWEEN <開始点> AND <終了点>
+
 ### Rows
+
+下記の例は開始点を「2つ前の行(2 PRECEDING)」、終了点を「現在行」にした場合である。
+```sql
+SELECT 
+  id, 
+  name,
+  SUM(id) OVER(
+    ORDER BY
+      id
+    ROWS 2 PRECEDING
+  ) result
+FROM
+  tb_test
+
+ID   NAME      RESULT
+------------------------
+1    Apple          1     #         1
+2    Banana         3     #     1 + 2
+3    Banana         6     # 1 + 2 + 3
+4    Apple          9     # 2 + 3 + 4 
+5    Apple         12     # 3 + 4 + 5
+
+```
 
 ### Range
 
