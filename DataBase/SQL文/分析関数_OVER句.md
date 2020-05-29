@@ -120,8 +120,9 @@ Window指定を省略したデフォルトの動作である。
 - ROWS/RANGE BETWEEN <開始点> AND <終了点>
 
 ### Rows
+いかに使用例を記す
 
-下記の例は開始点を「2つ前の行(2 PRECEDING)」、終了点を「現在行」にした場合である。
+例）開始点：「2つ前の行(2 PRECEDING)」、終了点：「現在行」
 ```sql
 SELECT 
   id, 
@@ -143,7 +144,28 @@ ID   NAME      RESULT
 5    Apple         12     # 3 + 4 + 5
 
 ```
+例）開始点：1つ前の行(1 PRECEDING)、終了点：1つ後の行(1 FOLLOWING)
+```sql
+SELECT
+  id,
+  name,
+  SUM(id) OVER(
+    ORDER BY
+      id
+     ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING
+  ) result
+FROM
+  tb_test
 
+ID   NAME      RESULT
+------------------------
+1    Apple          3     #     1 + 2
+2    Banana         6     # 1 + 2 + 3
+3    Banana         9     # 2 + 3 + 4
+4    Apple         12     # 3 + 4 + 5
+5    Apple          9     # 4 + 5
+
+```
 ### Range
 
 ## 参考
