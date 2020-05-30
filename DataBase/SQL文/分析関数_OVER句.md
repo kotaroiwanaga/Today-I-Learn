@@ -170,11 +170,11 @@ ID   NAME      RESULT
 開始点、終了点で使える使用法は以下の通り
 | 指定方法 | 説明 |
 |:-:|:-:|
-| UNBOUNDED PRECEDING | 先頭の行(終了点では使えない) |
-|  |  |
-|  |  | 
-|  |  |
-|  |  |
+| UNBOUNDED PRECEDING | 先頭の行（終了点では使えない） |
+| UNBOUNDED FOLLOWING | 末尾の行（開始点では使えない） |
+| CURRENT ROW | 現在行 | 
+| <n> PRECEDING | 現在行より<n>行前、RANGEの場合は<n>値前 |
+| <n> FOLLOWING | 現在行より<n>行後、RANGEの場合は<n>値後 |
 
 ### Range
 
