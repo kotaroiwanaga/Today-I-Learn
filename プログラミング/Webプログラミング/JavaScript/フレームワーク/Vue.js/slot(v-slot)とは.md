@@ -48,7 +48,54 @@ Hello
 
 ### 名前付きslot
 slotに異なる名前をつけることで複数のslotを利用できる。
-以下の例では
+
+子コンポーネント側で`<slot name="XXX">`で名前付きslotを定義する。  
+**Child.vue**
+```js
+<template>
+  <div>
+    <p>name:<slot name="nm">Taro</slot></p>
+    <p>address:<slot name="add">Japan</slot></p>
+  </div>
+</template>
+```
+
+親側では`v-slot:XXX`の形で子コンポーネントのタグ内に差し込みたい名前付きslotを指定する。  
+※`v-slot:XXX`は`#XXX`の省略記法でも書ける。  
+**Parent.vue**
+```js
+<template>
+  <div>
+    <child></child>
+    <child>
+      <template v-slot:nm>太郎</template>
+    </child>
+    <child>
+      <template v-slot:add>日本</template>
+    </child>
+  </div>
+</template>
+
+<script>
+import Child from '../components/Child.vue'
+
+export default {
+  components: {
+    Child
+  }
+}
+</script>
+```
+
+**出力**
+```
+name:Taro
+address:Japan
+name:太郎
+address:Japan
+name:Taro
+address:日本
+```
 
 ### スコープ付きslot
 
