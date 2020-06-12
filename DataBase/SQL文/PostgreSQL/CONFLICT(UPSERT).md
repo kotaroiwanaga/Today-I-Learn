@@ -2,8 +2,8 @@
 CONFLICT句はPostgreSQL以外のSQLだとUPSERTという機能にあたるもので、
 「INSERT句に対してもし制約で弾かれたらUPDATEする」というようなこ
 
-## 構文
-1. INSERT失敗時にUPDATEしたい場合の構文  
+## DO UPDATE
+INSERTの制約違反時にUPDATEを行う。
 1行目は普通のINSERT文  
 2行目はどの制約に引っかかったときに適用するか  
 3行目は制約に引っかかったときに何をするか
@@ -16,7 +16,14 @@ DO UPDATE SET カラム名='値', カラム名='値', ...;
 - 対象となる行が複数ある場合はそれぞれの行で 挿入→挿入失敗なら更新 が行われる。
 
 2.DO NOTHING
+制約違反時に何もしない
 
+```sql
+INSERT INTO テーブル名 VALUES ('値1', '値2', ...)
+ON CONFLICT ON CONSTANT 制約名
+DO NOTHING
+
+```
 
 ## 参考
 CONFLICT(UPSERT)を使ってみた
