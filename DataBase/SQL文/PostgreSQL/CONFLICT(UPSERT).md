@@ -26,5 +26,5 @@ DO NOTHING
 ```
 
 ## 参考
-CONFLICT(UPSERT)を使ってみた
+CONFLICT(UPSERT)を使ってみた  
 https://dev.classmethod.jp/articles/postgresql-9-5-new-function-upsert-use/
