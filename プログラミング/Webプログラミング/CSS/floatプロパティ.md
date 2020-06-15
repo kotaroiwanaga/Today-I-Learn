@@ -19,7 +19,7 @@ floatプロパティに指定できる値としては
 <div class="pink"></div>
 ```
 
-- CSS(float)
+- CSS(floatなし)
 ```css
 .yellow{
   background-color: yellow;
@@ -41,7 +41,38 @@ floatプロパティに指定できる値としては
 
 ```
 - 出力
+divはブロック要素なので前後に改行が入る。
 ![](https://udemy-benesse-co-jp.cdn.ampproject.org/i/s/udemy.benesse.co.jp/wp-content/uploads/float-3.png)
+
+
+- CSS(float付与)
+```css
+.yellow{
+  background-color: yellow;
+  width: 200px;
+  height: 250px;
+}
+
+.green{
+  background-color: green;
+  width: 150px;
+  height: 100px;
+}
+
+.pink{
+  background-color: pink;
+  width: 500px;
+  height: 80px;
+}
+
+```
+- 出力
+float:leftが付与されたyellow, greenはインライン要素のように前後に改行が入らなくなり、
+leftを指定したため左寄せになる。  
+そしてfloatが付与されていないpinkはyellow, greenを無視したかのように下に入り込む。  
+このようにfloatを付与した要素は他の要素より上のレイヤーに浮いた状態となる。
+![](https://udemy-benesse-co-jp.cdn.ampproject.org/i/s/udemy.benesse.co.jp/wp-content/uploads/float-5.png)
+
 
 ## text-alignとのビジュアル的な違い
 
