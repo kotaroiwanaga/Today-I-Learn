@@ -41,7 +41,7 @@ floatプロパティに指定できる値としては
 
 ```
 - 出力
-
+![](https://udemy-benesse-co-jp.cdn.ampproject.org/i/s/udemy.benesse.co.jp/wp-content/uploads/float-3.png)
 
 ## text-alignとのビジュアル的な違い
 
