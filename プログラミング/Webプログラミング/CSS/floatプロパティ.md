@@ -3,8 +3,15 @@ floatのイメージは**「１つ上のレイヤーに移動させる＝浮か�
 floatプロパティを付与された(left or right)要素は浮かんでいる状態であるため、
 後続の要素は**まるで**float付与要素が存在しないかのような振る舞いで配置される。
 
+floatプロパティに指定できる値としては
+- none (デフォルト：float適用なし)
+- left (左寄せ)
+- right (右寄せ)
+の３つがある。
+
+
 #### 例)
-以下のようなHTML,CSS
+以下のようなHTMLに対してCSSでfloatを指定した場合と指定しなかった場合を比較してみる。
 - HTML
 ```html
 <div class="yellow"></div>
@@ -12,7 +19,7 @@ floatプロパティを付与された(left or right)要素は浮かんでいる
 <div class="pink"></div>
 ```
 
-- CSS
+- CSS(float)
 ```css
 .yellow{
   background-color: yellow;
@@ -33,6 +40,8 @@ floatプロパティを付与された(left or right)要素は浮かんでいる
 }
 
 ```
+- 出力
+
 
 ## text-alignとのビジュアル的な違い
 
