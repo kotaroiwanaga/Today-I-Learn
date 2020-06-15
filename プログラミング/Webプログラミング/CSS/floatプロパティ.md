@@ -51,12 +51,14 @@ divはブロック要素なので前後に改行が入る。
   background-color: yellow;
   width: 200px;
   height: 250px;
+  float: left;
 }
 
 .green{
   background-color: green;
   width: 150px;
   height: 100px;
+  float: left;
 }
 
 .pink{
