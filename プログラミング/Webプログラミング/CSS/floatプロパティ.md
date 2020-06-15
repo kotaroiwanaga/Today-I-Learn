@@ -75,10 +75,6 @@ leftを指定したため左寄せになる。
 このようにfloatを付与した要素は他の要素より上のレイヤーに浮いた状態となる。
 ![](https://udemy-benesse-co-jp.cdn.ampproject.org/i/s/udemy.benesse.co.jp/wp-content/uploads/float-5.png)
 
-
-## text-alignとのビジュアル的な違い
-
-
 ## 参考
 CSS floatプロパティの書き方  
 https://www.google.co.jp/amp/s/udemy.benesse.co.jp/development/web/css-float.html
