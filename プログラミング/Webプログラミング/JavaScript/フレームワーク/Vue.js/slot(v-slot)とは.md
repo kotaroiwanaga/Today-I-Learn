@@ -169,5 +169,5 @@ name:太郎
 ```
 
 ## 参考
-Vue.jsのslotの機能を初心者にわかるように解説してみた
+Vue.jsのslotの機能を初心者にわかるように解説してみた  
 https://future-architect.github.io/articles/20200428/
