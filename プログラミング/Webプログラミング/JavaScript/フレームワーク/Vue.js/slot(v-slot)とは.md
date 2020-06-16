@@ -46,6 +46,18 @@ export default{
 Hello
 ```
 
+コンポーネント側のテンプレートに`<slot>`タグを記述すると、
+その場所はスロットコンテンツが埋め込まれます。
+
+**Child.vue**
+```js
+<template>
+  <div>
+    <p><slot>Hello</slot></p>
+  </div>
+</template>
+```
+
 ### 名前付きslot
 slotに異なる名前をつけることで複数のslotを利用できる。
 
