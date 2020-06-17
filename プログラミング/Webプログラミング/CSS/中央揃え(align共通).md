@@ -51,5 +51,8 @@ https://www.sejuku.net/blog/55523
 視覚形成モデル  
 https://www.webdesignleaves.com/pr/css/css_basic_02.html
 
-text-alignクイックリファレンス
+text-alignクイックリファレンス  
 http://www.htmq.com/style/text-align.shtml
+
+vertifical-alignクイックリファレンス  
+http://www.htmq.com/style/vertical-align.shtml
