@@ -67,3 +67,6 @@ http://www.htmq.com/style/text-align.shtml
 
 vertifical-alignクイックリファレンス  
 http://www.htmq.com/style/vertical-align.shtml
+
+CSSで要素を上下や左右から中央寄席する７つの方法  
+https://www.granfairs.com/blog/staff/centering-by-css
