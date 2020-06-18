@@ -32,8 +32,7 @@
 ```css
 p{
   width: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-width: auto;
 }
 ```
 
@@ -42,15 +41,27 @@ p{
 **vertifical-align**プロパティを使用する。
 text-alignとは異なり、**中央揃えにしたいインライン要素(テーブルセルも可)に**
 `vertifical-align:middle;`を設定する。  
-親ブロック要素のコンテンツ領域を基準に中央揃えされる。
+親ブロック要素ボックス領域を基準に中央揃えされる。
 そのため親要素の高さ(heightプロパティ)が対象のインライン要素の高さ(行ボックス？)より
 大きいか、同階層に対象のインライン要素より高さのある要素がないと適用されない。
 ![](https://www.granfairs.com/blog/upload/staff-2017-03-09-centering-by-css-04.png)
 
-ちなみにvertifical-alignのデフォルトはbaseline
+ちなみにvertifical-alignのデフォルトは`baseline`である。  
+ほかにも`top`,`bottom`などvertifical-alignは親ボックス領域基準だけでなく、
+行ボックス基準の揃え方もできるプロパティである。  
 ![](http://www.htmq.com/style/images/vertical-align02.gif)
 
 ### 2.2.ブロック要素の中央揃え(縦方向)
+横方向と同じくブロック要素同士は記述方向から順に詰めて配置されるものなので、
+揃えるという概念は存在しない。横方向同様に余白(margin)を利用する。
+
+例）
+```css
+p{
+  height: 60px;
+  margin-height: auto;
+}
+```
 
 ## 参考
 CSS：中央に配置する  
