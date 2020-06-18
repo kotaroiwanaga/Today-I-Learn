@@ -39,8 +39,12 @@ p{
 
 ## 2.縦方向の中央揃え
 ### 2.1.インライン要素の中央揃え(縦方向)
-**vertifical-align**プロパティを使用する。
-
+**行ボックスを基準に中央揃えする**場合は**vertifical-align**プロパティを使用する。
+プロパティ名からtext-alignの縦方向版と思いがちだが、違うので注意。  
+text-alignとは異なり、中央揃えにしたいインライン要素(テーブルセルも可)に
+`vertifical-align:middle;`を設定する。  
+ちなみにvertifical-alignのデフォルト値は`baseline`である。  
+![](http://www.htmq.com/style/images/vertical-align02.gif)
 
 ### 2.2.ブロック要素の中央揃え(縦方向)
 
