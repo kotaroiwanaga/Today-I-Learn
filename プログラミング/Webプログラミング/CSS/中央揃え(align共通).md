@@ -38,17 +38,27 @@ p{
 
 ## 2.縦方向の中央揃え
 ### 2.1.インライン要素の中央揃え(縦方向)
-**行ボックスを基準に上下中央揃えする**場合は**vertifical-align**プロパティを使用する。
-text-alignとは異なり、**中央揃えにしたいインライン要素(テーブルセルも可)に**
-`vertifical-align:middle;`を設定する。  
-ちなみにvertifical-alignのデフォルトは`baseline`である。  
+**行ボックスを基準に上下中央揃えする**場合は**vertical-align**プロパティを使用する。
+**中央揃えにしたいテキストを内包するインライン要素(テーブルセルも可)に**
+`vertical-align:middle;`を設定する。  
+ちなみにvertical-alignのデフォルトは`baseline`である。  
 ![](http://www.htmq.com/style/images/vertical-align02.gif)
 
 
-
-親ブロック要素ボックス領域を基準に中央揃えされる。
-そのため親要素の高さ(heightプロパティ)が対象のインライン要素の高さ(行ボックス？)より
-大きいか、同階層に対象のインライン要素より高さのある要素がないと適用されない。
+一方テーブルセルに適用すると親ブロック要素ボックス領域を基準に中央揃えされる。  
+(この理由はよくわからないが、vertical-alignは本来**行ボックスを基準に縦方向にテキストを揃える**プロパティであると思っておいたほうが良さそう)
+```css
+/* 親ブロック要素 */
+div.outer{
+  display: table;
+  width:100%;
+}
+/* 中央揃えするテーブルセル */
+span.inner{
+  display: table-cell;
+  vertifical-align: middle;
+}
+```
 ![](https://www.granfairs.com/blog/upload/staff-2017-03-09-centering-by-css-04.png)
 
 ### 2.2.ブロック要素の中央揃え(縦方向)
@@ -76,7 +86,7 @@ https://www.webdesignleaves.com/pr/css/css_basic_02.html
 text-alignクイックリファレンス  
 http://www.htmq.com/style/text-align.shtml
 
-vertifical-alignクイックリファレンス  
+vertical-alignクイックリファレンス  
 http://www.htmq.com/style/vertical-align.shtml
 
 CSSで要素を上下や左右から中央寄席する７つの方法  
