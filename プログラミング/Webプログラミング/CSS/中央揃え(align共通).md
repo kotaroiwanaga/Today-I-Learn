@@ -38,7 +38,7 @@ p{
 
 ## 2.縦方向の中央揃え
 ### 2.1.インライン要素の中央揃え(縦方向)
-**vertifical-align**プロパティを使用する。
+**行ボックスを基準に上下中央揃えする**場合は**vertifical-align**プロパティを使用する。
 text-alignとは異なり、**中央揃えにしたいインライン要素(テーブルセルも可)に**
 `vertifical-align:middle;`を設定する。  
 親ブロック要素ボックス領域を基準に中央揃えされる。
@@ -47,8 +47,6 @@ text-alignとは異なり、**中央揃えにしたいインライン要素(テ�
 ![](https://www.granfairs.com/blog/upload/staff-2017-03-09-centering-by-css-04.png)
 
 ちなみにvertifical-alignのデフォルトは`baseline`である。  
-ほかにも`top`,`bottom`などvertifical-alignは親ボックス領域基準だけでなく、
-行ボックス基準の揃え方もできるプロパティである。  
 ![](http://www.htmq.com/style/images/vertical-align02.gif)
 
 ### 2.2.ブロック要素の中央揃え(縦方向)
