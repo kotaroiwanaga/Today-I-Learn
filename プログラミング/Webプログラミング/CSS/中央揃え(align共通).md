@@ -31,7 +31,16 @@
 
 例）
 ```css
-p{
+/* 親要素 */
+div.outer{
+  position: relative;
+  width: 300px;
+}
+/* 子要素(中央揃え対象) */
+div.inner{
+  position: absolute;
+  left: 0;
+  right: 0;
   width: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -76,11 +85,20 @@ span.inner{
 
 例）
 ```css
-p{
-  height: 60px;
-  margin-top: auto;
-  margin-bottom: auto;
+/* 親要素 */
+div.outer{
+  position: relative;
+  height: 300px;
 }
+/* 子要素(中央揃え対象) */
+div.inner{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100px;
+  margin-top: auto;
+  margin-bottm: auto;
+
 ```
 
 ## 参考
