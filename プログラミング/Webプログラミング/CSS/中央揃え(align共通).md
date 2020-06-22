@@ -33,7 +33,8 @@
 ```css
 p{
   width: 100px;
-  margin-width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 ```
 
@@ -77,7 +78,8 @@ span.inner{
 ```css
 p{
   height: 60px;
-  margin-height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 ```
 
