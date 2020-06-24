@@ -9,3 +9,12 @@
 ![](https://www.webdesignleaves.com/pr/images/css/containingBlock.jpg)
 
 ### positionに設定できる値
+
+
+
+## 参考
+視覚整形モデル/ボックス   
+https://www.webdesignleaves.com/pr/css/css_basic_02.html
+
+CSSクイックリファレンス position   
+http://www.htmq.com/style/position.shtml
