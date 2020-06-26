@@ -27,27 +27,28 @@ staticとは異なり、top, bottom, left, rightを指定できる。
 #### absolute
 position:static;以外の直近の祖先要素を包含ブロックとする。  
 該当する祖先要素がなければ、ウィンドウが包含ブロックとなる。
-ただし、fixedのようにスクロールしてもウィンドウとの位置関係を保つことはないので、
-正確にはウィンドウではなくページ全体(画面外で隠れている部分も含めた全体)を包含ブロックにしてるイメージ。
-
-※ページ全体 = body ?  
-body要素をposition:relative;などに設定してleft:100px;などで表示領域の位置をずらすと
-それに合わせてposition;:absolute;の子要素も移動するが、bodyをpostion:static;に戻すと
-bodyの表示領域ではなく画面左端に配置されるので、bodyの外の何かを包含ブロックとしているみたい。
-でもbodyにbackgroud-colorを設定するとbodyのmargin設定を無視してページ全体に色がつくので
-bodyの表示領域の概念が謎。
-
-※ページ全体 = html ?  
-body要素にmarginをつけた状態でbackgroun-colorを設定すると画面全体に色がつくが、
-その状態でhtml要素にbackground-colorを設定すると余白部分にだけhtmlのbackground-colorの色がつく。
 
 #### fixed
 ウィンドウ(表示されている領域)を包含ブロックとする。
 他の値の時も同じだが、postion:fixedを指定しただけでは表示位置はデフォルトと変わらないので、  
 必ずtop, bottom, left, rightと併用すること。
 
-topとかを設定すると常にウィンドウとの距離を保とうとするので、スクロールしても画面に固定されたままになる。  
-本来の意味を考えるとこいつだけが真にウィンドウに合わせて配置位置を決めているといえる。
+### コラム ウィンドウの正体ってなんだ？
+#### ページ全体(ウィンドウ) = body ?  
+body要素をposition:relative;などに設定してleft:100px;などで表示領域の位置をずらすと
+それに合わせてposition;:absolute;の子要素も移動するが、bodyをpostion:static;に戻すと
+bodyの表示領域ではなく画面左端に配置されるので、bodyの外の何かを包含ブロックとしているみたい。
+でもbodyにbackgroud-colorを設定するとbodyのmargin設定を無視してページ全体に色がつくので
+bodyの表示領域の概念が謎。
+
+#### ページ全体(ウィンドウ) = html ?  
+body要素にmarginをつけた状態でbackgroun-colorを設定すると画面全体に色がつくが、
+その状態でhtml要素にbackground-colorを設定すると余白部分にだけhtmlのbackground-colorの色がつく。
+htmlにposition:relative;とmarginを設定するとpostion:absolute;やposition:relative;の要素は
+marginに合わせて位置が変わった。が、background-colorは相変わらず全体に適用されている。
+ちなみに、htmlをpostion:relative;の状態でleftやtopを設定してもbackground-colorの領域や子要素の位置は変わらなかった。
+
+bodyもhtmlも祖先要素にpostion:static;以外が設定されている要素がなければ、自身がページ全体を担うことになる？
 
 ## 参考
 視覚整形モデル/ボックス   
