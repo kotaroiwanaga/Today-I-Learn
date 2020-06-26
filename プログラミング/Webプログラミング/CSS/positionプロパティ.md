@@ -30,12 +30,16 @@ position:static;以外の直近の祖先要素を包含ブロックとする。
 ただし、fixedのようにスクロールしてもウィンドウとの位置関係を保つことはないので、
 正確にはウィンドウではなくページ全体(画面外で隠れている部分も含めた全体)を包含ブロックにしてるイメージ。
 
-※ページ全体 ≠ body ?
+※ページ全体 = body ?  
 body要素をposition:relative;などに設定してleft:100px;などで表示領域の位置をずらすと
 それに合わせてposition;:absolute;の子要素も移動するが、bodyをpostion:static;に戻すと
 bodyの表示領域ではなく画面左端に配置されるので、bodyの外の何かを包含ブロックとしているみたい。
 でもbodyにbackgroud-colorを設定するとbodyのmargin設定を無視してページ全体に色がつくので
 bodyの表示領域の概念が謎。
+
+※ページ全体 = html ?  
+body要素にmarginをつけた状態でbackgroun-colorを設定すると画面全体に色がつくが、
+その状態でhtml要素にbackground-colorを設定すると余白部分にだけhtmlのbackground-colorの色がつく。
 
 #### fixed
 ウィンドウ(表示されている領域)を包含ブロックとする。
