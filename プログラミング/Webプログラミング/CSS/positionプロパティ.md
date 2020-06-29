@@ -36,7 +36,7 @@ top, bottom, left, rightで設定したウィンドウとの位置関係がス�
 他の値の時も同じだが、postion:fixedを指定しただけでは表示位置はデフォルトと変わらないので、  
 必ずtop, bottom, left, rightと併用すること。  
 
-### コラム ウィンドウの正体ってなんだ？
+### コラム absoluteでいうウィンドウの正体ってなんだ？
 #### ページ全体(ウィンドウ) = body ?  
 body要素をposition:relative;などに設定してleft:100px;などで表示領域の位置をずらすと
 それに合わせてposition;:absolute;の子要素も移動するが、bodyをpostion:static;に戻すと
