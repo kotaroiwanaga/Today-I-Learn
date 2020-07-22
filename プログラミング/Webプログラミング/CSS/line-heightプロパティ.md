@@ -13,7 +13,7 @@ line-heightは **「行の高さ」** を意味する。
    仮にテキストの文字の高さが1pxだとすると、  
    **文字の高さ = 行の高さ** であるから、行間のない詰まったような表示になる。
    
-   ![](./img/line-height1.PNG)
+   ![](./Images/line-height1.PNG)
    
    ※ちなみに`line-height: 1em;`(emはなくてもよい)と設定すると文字の高さを1としたときの行の高さを設定できる。  
 
@@ -22,14 +22,14 @@ line-heightは **「行の高さ」** を意味する。
 2. 次に文字の高さ1pxに対してline-height: 2px;とすると、
 
    **文字の高さ < 行の高さ**であるから、文字の上下に0.5pxずつ(行間は0.5+0.5=1px)の**余白が作られる**。
-   ![](./img/line-height2.PNG)
+   ![](./Images/line-height2.PNG)
 
 3. 文字の高さ2pxに対してline-height: 1px;とすると
    **文字の高さ > 行の高さ**であるから、各行の文字が1pxの高さに収まろうとするので、
    各行の文字同士が1pxずつ**重なって表示**される。
    
-   ![](./img/line-height3.PNG)
+   ![](./Images/line-height3.PNG)
    
    もちろん、line-height: 0px;にすれば各行が完全に重なることになる。
    
-   ![](./img/line-height4.PNG)
+   ![](./Images/line-height4.PNG)
