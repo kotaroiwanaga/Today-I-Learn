@@ -2,7 +2,7 @@
 
 ### 方法2:busyboxコマンド
 
-- 下記よりbusybox.exeをダウンロード
+- 下記よりbusybox.exeをダウンロード  
 http://frippery.org/busybox/
 
 - ダウンロードしたbusybox.exeのディレクトリの環境パスを通す
