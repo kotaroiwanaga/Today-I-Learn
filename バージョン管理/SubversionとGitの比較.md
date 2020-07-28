@@ -12,8 +12,10 @@ Gitが初の分散型バージョン管理システムだというわけでは�
 チーム開発を進めるうえで必要な操作を担い、開発効率を向上させることができる。
 
 バージョン管理システムには対象のデータの管理方法によって種類があり、本稿では以下のシステムについて説明する。
-- **中央集中型** 例) Subversion(SVN)，Concurrent Version System(CVS)
-- **分散型** 例) Git, Mercurial, Bazaar, Fossil
+- **中央集中型**  
+例) Subversion(SVN)，Concurrent Version System(CVS)
+- **分散型**  
+例) Git, Mercurial, Bazaar, Fossil
 
 #### 観点
 - バックアップの取りやすさ、復元のしやすさ
