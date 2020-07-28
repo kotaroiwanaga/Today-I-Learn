@@ -1,5 +1,4 @@
-### 方法1:OSSを使う
-coming soon..
+### 方法1:git bashを使う
 
 ### 方法2:busyboxコマンド
 
@@ -20,10 +19,3 @@ http://frippery.org/busybox/
 
 参考
 https://qiita.com/tetsuy/items/22cba0bc2048967b270a
-
-### 方法3:ndows Subsystem for Linux
-
-coming soon..
-
-参考
-https://qiita.com/Aruneko/items/c79810b0b015bebf30bb
