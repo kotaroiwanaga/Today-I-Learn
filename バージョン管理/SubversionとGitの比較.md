@@ -18,9 +18,15 @@ Gitが初の分散型バージョン管理システムだというわけでは�
 例) Git, Mercurial, Bazaar, Fossil
 
 ## 集中型バージョン管理システム
+リポジトリ(データの保管場所)がサーバ上のリモートリポジトリの１つだけに集中しており、
+作業者全員が同じリポジトリに対して変更を加えていく。
+作業者はリモートリポジトリから最新のデータをローカルの作業ディレクトリに複製(update)し、
+ローカルでデータを変更し、リモートリポジトリに反映(commit)させることで複数人での共同編集を実現している。
 ![](https://bst-image.imgix.net/prod-hivelocity/content/uploads/2014/11/postimg02_20141106-.jpg?auto=format&ixlib=php-1.2.1)
 
 ## 分散型バージョン管理システム
+リモートリポジトリからローカルへリポジトリごと複製(clone, 最新の状態に更新するときは pull)する。
+
 ![](https://bst-image.imgix.net/prod-hivelocity/content/uploads/2014/11/postimg03_20141106-.jpg?auto=format&ixlib=php-1.2.1)
 
 # GitとSubversionの比較
