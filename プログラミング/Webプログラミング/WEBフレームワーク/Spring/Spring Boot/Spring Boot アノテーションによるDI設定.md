@@ -19,8 +19,13 @@ DI(依存性の注入)を考えるうえでの登場人物として中身を注�
 - @Componentの検索範囲パッケージ： **@ComponentScan**
 
 DIの流れのイメージとしては、
-1. DIコンテナが管理対象とする範囲(パッケージ)に属するクラス(メインクラス)に@ComponentScanを付与する。**※1**
-1. 
+1. DIコンテナが`@Component`を検索する範囲(パッケージ)に属するクラス(メインクラス)に`@ComponentScan`を付与する。**※1**
+1. コンポネントとしてDI管理(自動でインスタンス化して型の合う入れ物に代入して)ほしいクラスに`@Component`を付与する。**※2**
+1. 後からインスタンスを自動で代入しておいてほしいフィールド(@ComponentScanの対象パッケージ内)に`@Autowired`を付与する。
+1. DIコンテナは検索対象パッケージ内の@Componentが付与されている全クラスをインスタンス化して所持する。
+1. DIコンテナは`@Autowired`が付与されているフィールドに、所持しているインスタンスの中から型が一致するものを選び、代入する。
+
+といった手順で依存性の注入を行っている。
 
 **※1** 実際には下記クラスのように@ComponentScanのほかに`@Configuration`, `@EnableAutoConfiguration`の付与が合わせて必要。
    
@@ -43,6 +48,11 @@ public class SpringSampleApplication {
 1. `@ConpomentScan`でこのクラスが属するパッケージをコンポーネント検索対象範囲とする。
 
 ※ 実際には`@Coinfiguration`, `@EnableAutoConfiguration`, `@ConpomentScan`を内包する`@SpringBootApplication`を付与することが一般的。
+
+**※2** `@Component`以外にもスキャンの対象となるアノテーションが存在し、以下のようにクラスの役割に応じて使用するアノテーションを使い分ける。
+- **@Controller**（@RestController）： MVCのControllerを対象とする
+- **@Service**： ビジネスロジック等のサービス層を対象とする
+- **@Repository**： DAOなどDBアクセスを行うクラスを対象とする
 
 # 参考
 Spring Boot入門①  
