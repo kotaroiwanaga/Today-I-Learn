@@ -24,7 +24,7 @@ DI(依存性の注入)を考えるうえでの登場人物として、DIコン�
 
 Spring Boot入門①
 
-https://qiita.com/gksdyd88/items/7886f54ee8a22d3
+https://qiita.com/gksdyd88/items/7886f54ee8a22d311400
 
 
 
