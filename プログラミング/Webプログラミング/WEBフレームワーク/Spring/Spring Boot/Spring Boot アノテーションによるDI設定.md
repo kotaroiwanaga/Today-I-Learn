@@ -27,7 +27,7 @@ DIの流れのイメージとしては、
 
 といった手順で依存性の注入を行っている。
 
-##### **※1** 
+##### **注1** 
 実際には下記クラスのように@ComponentScanのほかに`@Configuration`, `@EnableAutoConfiguration`の付与が合わせて必要。
    
 ```java
