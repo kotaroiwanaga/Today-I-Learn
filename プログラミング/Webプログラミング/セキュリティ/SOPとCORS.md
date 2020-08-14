@@ -24,6 +24,12 @@ SOPは、ある2つのURLに関してオリジンが同一(**同一オリジン*
 クロスオリジンでは原則としてリソースの読み書きが禁止であると前述したが、具体的にこの制限が適用される場合は**シンプルリクエスト**でないリクエスト(**プリフライトリクエスト**)のときとなる。実際にはWebブラウザがリクエストがシンプルリクエストかどうか判定して、該当しなければプレフライトリクエストする動作を自動で行っている。
 
 ### シンプルリクエスト
+シンプルリクエストは以下の条件にすべて該当するリクエストのこと。
+- リクエストメソッドの種類：GET, POST, HEAD のいずれか
+- Content-Type：application/x-www-form-urlencoded, multipart/form-data, text/plain のいずれか
+- ヘッダ：Accept, Accept-Language, Content-Language, DPR, Downlink, Save-Data, Viewport-Width, Width のみで構成される
+
+シンプルリクエストの場合、CORSの設定なしに外部オリジンへの通信が可能。
 
 ### プリフライトリクエスト
 
