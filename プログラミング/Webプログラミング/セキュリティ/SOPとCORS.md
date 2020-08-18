@@ -29,9 +29,12 @@ SOPは、ある2つのURLに関してオリジンが同一(**同一オリジン*
 - Content-Type：application/x-www-form-urlencoded, multipart/form-data, text/plain のいずれか
 - ヘッダ：Accept, Accept-Language, Content-Language, DPR, Downlink, Save-Data, Viewport-Width, Width のみで構成される
 
-シンプルリクエストの場合、CORSの設定なしに外部オリジンへの通信が可能。
+シンプルリクエストの場合、**CORSの設定なしに外部オリジンへの通信が可能**。
 
 ### プリフライトリクエスト
+プリフライトリクエストとは、**実リクエストを行う前にリクエスト送信先のサーバに送る、許可されている通信元であるかどうかを確認するHTTPリクエスト**のこと。シンプルリクエストの条件を満たさないリクエストに関しては、下記のようなフローでWebブラウザが自動でプリフライトリクエストを送信する。プリフライトリクエストのレスポンスから許可されていることが確認できた場合のみ実リクエストを送信し、そうでなければリクエストを終了する。
+
+![](https://yamory.io/blog/images/posts/about-cors/flowchart.png)
 
 ## SOPの目的
 SOPはオリジン間のリソース共有に制限をかけることで、以下のような脆弱性を防ぐことを目的としている。
