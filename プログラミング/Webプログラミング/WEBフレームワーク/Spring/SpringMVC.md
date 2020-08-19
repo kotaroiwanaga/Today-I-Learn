@@ -145,3 +145,19 @@ URLの親のパスにマッチする。
 | Theme resolver              | theme名を解決します。themeとは、CSSのクラス名や、イメージファイル名などを指します。使用することで、後で、一括して変更できるようにもなります。propertiesファイルに、　 background=/themes/cool/img/coolBg.jpgと記述して、JSPファイルなどで、　style="background=<spring:theme code='background'/>" のような使い方をします。 |
 | multipart file resolver     | ファイルアップロードの方法を提供します。利用したい時だけ設定すれば大丈夫です。 |
 | handler exception resolvers | 例外処理の方法を提供します。利用したい時だけ設定すれば大丈夫です。 |
+
+# Controller処理メソッドの引数と返り値
+## 引数の受け取り方
+Controllerのメソッドでは引数にアノテーションをつけることで以下の値を受け取ることができる。
+- @PathVariable()  : リクエストパラメータ
+- @RequestHeader() : リクエストのヘッダ
+- @CookieValue()   : クッキーの値
+- @RequestBody     : リクエストのボディの内容
+
+例)
+```java
+public String input (Form form, @RequestHeader(required=fale, value="User-Agent") String agent){
+    return "user-Edit-Input";
+}
+```
+
