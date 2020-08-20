@@ -162,10 +162,10 @@ public String input (Form form, @RequestHeader(required=fale, value="User-Agent"
 }
 ```
 # 参考
-SpringMVCについて
+SpringMVCについて  
 https://sites.google.com/site/soracane/home/springnitsuite/spring-mvc/1-ji-ben-gai-nian-quan-ti-dena-chu-lifuro
 
-Spring での責務についてまず見てほしい一枚の絵
+Spring での責務についてまず見てほしい一枚の絵  
 https://qiita.com/yo1000/items/a6acbf5f454a7f53aef9
 
 
