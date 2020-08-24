@@ -32,7 +32,7 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 | Repository | @Repository |  |
 | Template | - |  |
 | Configuration | @Configuration |  |
-| Advice | @Aspect ControllerAdvice |  |
+| Advice | @Aspect @ControllerAdvice |  |
 | - | @Component |  |
 
 ここで注意してほしいことは**MVCとSpringMVCではModelの役割が異なる**こと。
