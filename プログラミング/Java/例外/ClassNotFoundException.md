@@ -20,6 +20,8 @@ eclipseは保存時(Ctrl + S 押下時)に自動でコンパイルを行い、.c
 
 2. eclipseを再起動し、JUnit再実行する
 
+※自動ビルドが動作せずにClassNotFoundExceptionになる場合は対象のクラスファイルに文法エラーが出ないように何かしら変更を加え(適当に改行して元に戻すとか)、Ctrl+Sで保存すると自動ビルドが動くかも。
+
 ## 参考
 
 java.lang.ClassNotFoundException って、どういうことよ？  
