@@ -25,7 +25,7 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 
 | コンポーネント | 対応アノテーション | 役割 |
 |:-:|:-:|:-:|
-| Model | - |  |
+| Model | - | 各コンポーネント間でデータをやりとりするためのコンポーネント。POJO(処理を持たないただの入れ物としてのデータ)にするのが一般的。 |
 | View | - |  |
 | Controller | @Controller |  |
 | Service | @Service |  |
