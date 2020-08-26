@@ -26,12 +26,12 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 | コンポーネント | 対応アノテーション | 役割 |
 |:-:|:-:|:-:|
 | Model | - | 各コンポーネント間でデータをやりとりするためのコンポーネント。POJO(処理を持たないただの入れ物としてのデータ)にするのが一般的。 |
-| View | - |  |
-| Controller | @Controller |  |
-| Service | @Service |  |
-| Repository | @Repository |  |
-| Template | - |  |
-| Configuration | @Configuration |  |
+| View | - | フロントにレスポンスされるもの。HTML,JSON,XML,CSV,PDFなどJavaでない部分が担うので対応アノテーションはない。 |
+| Controller | @Controller | フロントからのリクエスト、およびフロントへのレスポンスのハンドリングのみを行い、具体的な処理は別のコンポーネントに任せる。 |
+| Service | @Service | 処理担当の主役。レスポンス、リクエストに依存したような処理やDBとの直接的なやり取りは担当外。 |
+| Repository | @Repository | DBとのやり取り担当。 |
+| Template | - | よくわからん。後で調べよう。 |
+| Configuration | @Configuration | 構成管理や設定担当。 |
 | Advice | @Aspect @ControllerAdvice |  |
 | - | @Component |  |
 
