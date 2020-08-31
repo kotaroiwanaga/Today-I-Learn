@@ -14,12 +14,12 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 4. Controllerは結果に応じてどのViewに表示させるか選択し、Viewに結果を渡す。
 5. Viewが結果を表示する。
 
-![](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F147552%2F2ddbe9a4-87f5-93cb-174e-085bf13db82a.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&w=1400&fit=max&s=3baf03a2872a60611ae7a738ca100a7a)
+![SpringMVC.png](Images/SpringMVC1.png)
 
 # Spring Frameworkが捉えるアプリケーションの全体構造
 次にSpring Frameworkにおける(Web)アプリケーションの全体構造を見ていく。Spring Frameworkでは以下のようなコンポーネント(部品)で全体が構成されている。各コンポーネントには対応するアノテーションが存在し、これらの**アノテーションをクラスに付与することで、ユーザから、そしてDIコンテナからもそのクラスがどのコンポーネントとしての役割を持つのか一目で分かる**ようになっている。  
 
-![](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F47993%2Fe8276c74-74a7-0976-e22d-7765a4fcbaf6.png?ixlib=rb-1.2.2&auto=format&gif-q=60&q=75&w=1400&fit=max&s=8696e80b6f477f0f14751a46238c3487)
+![spring-mvc3.png](Images/SpringMVC2.png)
 
 各コンポーネントが持つ役割(責務ていう方が一般的なのかも)は以下の通り。
 
@@ -38,7 +38,7 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 ここで注意してほしいことは**MVCとSpringMVCではModelの役割が異なる**こと。
 
 # SpringMVCの役割
-![](https://sites.google.com/site/soracane/_/rsrc/1333771245937/home/springnitsuite/spring-mvc/1-ji-ben-gai-nian-quan-ti-dena-chu-lifuro/mvc_overall.JPG)
+![img](Images/SpringMVC3.JPG)
 
 # 参考
 Spring MVC 基本概念  
