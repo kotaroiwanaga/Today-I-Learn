@@ -25,7 +25,7 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 以下の図を見ると
 ![img](Images/SpringMVC3.JPG)
 
-# WEBアプリの各コンポーネントの役割
+# Springが捉えるWEBアプリの全体構造
 次にSpring Frameworkにおける(Web)アプリケーションの全体構造を見ていく。Spring Frameworkでは以下のようなコンポーネント(部品)で全体が構成されている。各コンポーネントには対応するアノテーションが存在し、これらの**アノテーションをクラスに付与することで、ユーザから、そしてDIコンテナからもそのクラスがどのコンポーネントとしての役割を持つのか一目で分かる**ようになっている。  
 
 ![spring-mvc3.png](Images/SpringMVC2.png)
