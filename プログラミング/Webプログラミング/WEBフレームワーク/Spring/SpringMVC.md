@@ -16,6 +16,8 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 
 ![SpringMVC.png](Images/SpringMVC1.png)
 
+# SpringMVCとは ~MVCと何が違う？~
+
 # Spring Frameworkが捉えるアプリケーションの全体構造
 次にSpring Frameworkにおける(Web)アプリケーションの全体構造を見ていく。Spring Frameworkでは以下のようなコンポーネント(部品)で全体が構成されている。各コンポーネントには対応するアノテーションが存在し、これらの**アノテーションをクラスに付与することで、ユーザから、そしてDIコンテナからもそのクラスがどのコンポーネントとしての役割を持つのか一目で分かる**ようになっている。  
 
