@@ -20,6 +20,7 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 ![SpringMVC.png](Images/SpringMVC1.png)
 
 # SpringMVCとは ～MVCと何が違う？～
+SpringMVCのM・V・CはMVCのときと同じくModel・View・Controllerを指す。ただし、**Modelの役割が違う**。
 
 # WEBアプリの全体構造 ～SpringMVCの役割～
 以下の図を見ると
