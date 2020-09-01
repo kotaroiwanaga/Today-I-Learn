@@ -1,3 +1,6 @@
+# はじめに
+本稿では**Spring Frameworkが捉えるWEBアプリの構造を基準に**WEBアプリの大まかな全体構造と、その中の一部であるSpringMVCという構造について説明していく。**あくまでいくつかの記事を参考にまとめた個人の見解**なので、**内容に間違いや不足の可能性がある**ことは留意していただきたい。ていうか指摘してほしい。
+
 # そもそもMVCとは？
 SpringMVCの前にそもそもMVCとは何かに軽く触れておく。(MVCとSpringMVCはちょっと違うよていう話がしたい。)
 MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**の3つの役割に分けた設計思想のこと。
@@ -16,9 +19,13 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 
 ![SpringMVC.png](Images/SpringMVC1.png)
 
-# SpringMVCとは ~MVCと何が違う？~
+# SpringMVCとは ～MVCと何が違う？～
 
-# Spring Frameworkが捉えるアプリケーションの全体構造
+# WEBアプリの全体構造 ～SpringMVCの役割～
+以下の図を見ると
+![img](Images/SpringMVC3.JPG)
+
+# WEBアプリの各コンポーネントの役割
 次にSpring Frameworkにおける(Web)アプリケーションの全体構造を見ていく。Spring Frameworkでは以下のようなコンポーネント(部品)で全体が構成されている。各コンポーネントには対応するアノテーションが存在し、これらの**アノテーションをクラスに付与することで、ユーザから、そしてDIコンテナからもそのクラスがどのコンポーネントとしての役割を持つのか一目で分かる**ようになっている。  
 
 ![spring-mvc3.png](Images/SpringMVC2.png)
@@ -40,7 +47,7 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 ここで注意してほしいことは**MVCとSpringMVCではModelの役割が異なる**こと。
 
 # SpringMVCの役割
-![img](Images/SpringMVC3.JPG)
+
 
 # 参考
 Spring MVC 基本概念  
