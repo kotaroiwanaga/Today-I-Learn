@@ -10,17 +10,29 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 - **View**： UI担当(ユーザからの画面入力/ユーザへの結果出力)
 - **Controller**：制御担当(入力情報をもとにどのModelに処理をさせるか、結果をどのViewに出力させるかを決める)
 
+![SpringMVC.png](Images/SpringMVC1.png)
+
 流れとしては以下の1~5を繰り返す。
 1. ユーザからの入力をViewが受け取り、Controllerに渡す。
 2. Controllerは入力に応じてどのModelに処理をさせるか選択し、Modelに入力を渡して処理させる。
 3. Modelは処理を行い、結果をControllerに渡す。
-4. Controllerは結果に応じてどのViewに表示させるか選択し、Viewに結果を渡す。
-5. Viewが結果を表示する。
+4. Controllerは結果に応じてどのViewに表示させるか選択する。
+5. ViewがModelから結果を参照して表示する。
 
-![SpringMVC.png](Images/SpringMVC1.png)
+
 
 # SpringMVCとは ～MVCと何が違う？～
-SpringMVCのM・V・CはMVCのときと同じくModel・View・Controllerを指す。ただし、**Modelの役割が違う**。
+SpringMVCのM・V・CはMVCのときと同じくModel・View・Controllerを指す。ただし、**それぞれの役割が異なる。特にModel**。
+
+- **Model**: **View⇔Controller間でやり取りするデータ**
+- **View**： UI担当(ユーザからの画面入力/ユーザへの結果出力)
+- **Controller**：制御担当(入力データ受取とViewの選択と出力データ引き渡し)
+
+![image-20200902144344847](Images/SpringMVC4.png)
+
+上記の図からもわかる通り、**SpringMVCにおけるModelはただのデータを保持するための入れ物(POJO)**であり**MVCにあった処理担当が存在しない**。実は**SpringMVCはWEBアプリを構成する構造の一部**であり、SpringMVCだけではWEBアプリの機能を完結させることができない。
+
+※このMVCとSpringMVCではModelの意味が異なるために、Modelという言葉は使いどころによって変化してしまう扱いづらい言葉になってしまってる（と思う）。
 
 # WEBアプリの全体構造 ～SpringMVCの役割～
 以下の図を見ると
