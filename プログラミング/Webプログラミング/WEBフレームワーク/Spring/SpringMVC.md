@@ -34,16 +34,19 @@ SpringMVCのM・V・CはMVCのときと同じくModel・View・Controllerを指�
 
 ###### ※このMVCとSpringMVCではModelの意味が異なるために、Modelという言葉は「処理担当」「処理を持たないただの入れ物(POJO)」の両極端な意味で扱われる迷惑な言葉になってしまってる（と思う）。
 
-# WEBアプリの全体構造 ～SpringMVCの役割～
-以下の図を見ると
+# Springが捉えるWEBアプリの全体構造
+以下の図ではWEBアプリ全体構造とSpringが管理する範囲を示している。この図を見るとSpringMVCがWEBアプリの構成する一部であることが見て取れる。
 ![img](Images/SpringMVC3.JPG)
 
-# Springが捉えるWEBアプリの全体構造
-次にSpring Frameworkにおける(Web)アプリケーションの全体構造を見ていく。Spring Frameworkでは以下のようなコンポーネント(部品)で全体が構成されている。各コンポーネントには対応するアノテーションが存在し、これらの**アノテーションをクラスに付与することで、ユーザから、そしてDIコンテナからもそのクラスがどのコンポーネントとしての役割を持つのか一目で分かる**ようになっている。  
+さらにSpringMVCにフォーカスした詳細な説明は参考にもある[Spring MVC 基本概念](https://sites.google.com/site/soracane/home/springnitsuite/spring-mvc/1-ji-ben-gai-nian-quan-ti-dena-chu-lifuro#TOC-Spring-MVC-)を参照。
+
+Springで作るWEBアプリは以下のようなコンポーネント(部品)で全体が構成されている。SpringMVCではカバーしきれなかった処理クラス(Service)などもSpringで管理することができる。各コンポーネントには対応するアノテーションが存在し、これらの**アノテーションをクラスに付与することで、ユーザから、そしてDIコンテナからもそのクラスがどのコンポーネントとしての役割を持つのか一目で分かる**ようになっている。  
 
 ![spring-mvc3.png](Images/SpringMVC2.png)
 
-各コンポーネントが持つ役割(責務ていう方が一般的なのかも)は以下の通り。
+各コンポーネントが持つ役割は以下の通り。元の記事は[こちら](https://qiita.com/yo1000/items/a6acbf5f454a7f53aef9)。
+
+
 
 | コンポーネント | 対応アノテーション | 役割 |
 |:-:|:-:|:-:|
@@ -52,14 +55,12 @@ SpringMVCのM・V・CはMVCのときと同じくModel・View・Controllerを指�
 | Controller | @Controller | フロントからのリクエスト、およびフロントへのレスポンスのハンドリングのみを行い、具体的な処理は別のコンポーネントに任せる。 |
 | Service | @Service | 処理担当の主役。レスポンス、リクエストに依存したような処理やDBとの直接的なやり取りは担当外。 |
 | Repository | @Repository | DBとのやり取り担当。 |
-| Template | - | よくわからん。後で調べよう。 |
+| Template | - | 共通的な永続化処理？を担当するらしい。よくわからん。後で調べよう。 |
 | Configuration | @Configuration | 構成管理や設定担当。 |
-| Advice | @Aspect @ControllerAdvice |  |
-| - | @Component |  |
+| Advice | @Aspect @ControllerAdvice | アノテーション名にAspectと名の付く通り、AOPの役割を持つ。メソッドの前や後、または前後に共通的な処理を後付けすることができ、本来の責務とは直接関係のない処理を、各責務から分離した処理に使用する。 |
+| - | @Component | いろんなところから利用されるようなユーティリティに使用する。DIコンテナはあくまでインスタンスを管理するため、staticメソッドを集めたようなユーティリティクラスは作らずに@Componentを付与してインスタンスをDIコンテナに管理させることが推奨される。 |
 
-ここで注意してほしいことは**MVCとSpringMVCではModelの役割が異なる**こと。
 
-# SpringMVCの役割
 
 
 # 参考
