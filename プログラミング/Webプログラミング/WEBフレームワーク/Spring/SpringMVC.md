@@ -32,7 +32,7 @@ SpringMVCのM・V・CはMVCのときと同じくModel・View・Controllerを指�
 
 上記の図からもわかる通り、**SpringMVCにおけるModelはただのデータを保持するための入れ物(POJO)**であり**MVCにあった処理担当が存在しない**。実は**SpringMVCはWEBアプリを構成する構造の一部**であり、SpringMVCだけではWEBアプリの機能を完結させることができない。
 
-※このMVCとSpringMVCではModelの意味が異なるために、Modelという言葉は使いどころによって変化してしまう扱いづらい言葉になってしまってる（と思う）。
+###### ※このMVCとSpringMVCではModelの意味が異なるために、Modelという言葉は「処理担当」「処理を持たないただの入れ物(POJO)」の両極端な意味で扱われる迷惑な言葉になってしまってる（と思う）。
 
 # WEBアプリの全体構造 ～SpringMVCの役割～
 以下の図を見ると
