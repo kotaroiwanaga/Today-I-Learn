@@ -40,7 +40,11 @@ SpringMVCのM・V・CはMVCのときと同じくModel・View・Controllerを指�
 飽きたのでここまで。  
 さらにSpringMVCにフォーカスした詳細な説明は参考にもある[Spring MVC 基本概念](https://sites.google.com/site/soracane/home/springnitsuite/spring-mvc/1-ji-ben-gai-nian-quan-ti-dena-chu-lifuro#TOC-Spring-MVC-)を参照。
 
-## おまけ
+## おまけ1 SpringMVCになぜ具体的内処理の部分が含まれないのか(個人的考察)
+おまけ2でも紹介してるが、Sprng自体には処理クラス(Service以降のレイヤ)を管理する機能があり、基本的にWEBアプリには必要不可欠なのだと思われる。
+しかし、**WEBアプリをWEBアプリたらしめているのは「クライアント-サーバ間のデータのやり取り」＝「ViewController間のModelのやり取り」**であり、WEBアプリの基幹機能はやはりSpringMVCの機能である。SpringMVCはMVCからさらにWEBアプリの根幹にフォーカスを当てた構造であると言える。
+
+## おまけ2
 Springで作るWEBアプリは以下のようなコンポーネント(部品)で全体が構成されている。SpringMVCではカバーしきれなかった処理クラス(Service)などもSpringで管理することができる。各コンポーネントには対応するアノテーションが存在し、これらの**アノテーションをクラスに付与することで、ユーザから、そしてDIコンテナからもそのクラスがどのコンポーネントとしての役割を持つのか一目で分かる**ようになっている。  
 
 ![spring-mvc3.png](Images/SpringMVC2.png)
