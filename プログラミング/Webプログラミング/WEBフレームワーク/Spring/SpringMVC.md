@@ -20,7 +20,6 @@ MVCとはUIを持つアプリケーションを**Model**/**View**/**Controller**
 5. ViewがModelから結果を参照して表示する。
 
 
-
 # SpringMVCとは ～MVCと何が違う？～
 SpringMVCのM・V・CはMVCのときと同じくModel・View・Controllerを指す。ただし、**それぞれの役割が異なる。特にModel**。
 
@@ -38,14 +37,15 @@ SpringMVCのM・V・CはMVCのときと同じくModel・View・Controllerを指�
 以下の図ではWEBアプリ全体構造とSpringが管理する範囲を示している。この図を見るとSpringMVCがWEBアプリの構成する一部であることが見て取れる。
 ![img](Images/SpringMVC3.JPG)
 
+飽きたのでここまで。  
 さらにSpringMVCにフォーカスした詳細な説明は参考にもある[Spring MVC 基本概念](https://sites.google.com/site/soracane/home/springnitsuite/spring-mvc/1-ji-ben-gai-nian-quan-ti-dena-chu-lifuro#TOC-Spring-MVC-)を参照。
 
+## おまけ
 Springで作るWEBアプリは以下のようなコンポーネント(部品)で全体が構成されている。SpringMVCではカバーしきれなかった処理クラス(Service)などもSpringで管理することができる。各コンポーネントには対応するアノテーションが存在し、これらの**アノテーションをクラスに付与することで、ユーザから、そしてDIコンテナからもそのクラスがどのコンポーネントとしての役割を持つのか一目で分かる**ようになっている。  
 
 ![spring-mvc3.png](Images/SpringMVC2.png)
 
 各コンポーネントが持つ役割は以下の通り。元の記事は[こちら](https://qiita.com/yo1000/items/a6acbf5f454a7f53aef9)。
-
 
 
 | コンポーネント | 対応アノテーション | 役割 |
@@ -59,7 +59,6 @@ Springで作るWEBアプリは以下のようなコンポーネント(部品)で
 | Configuration | @Configuration | 構成管理や設定担当。 |
 | Advice | @Aspect @ControllerAdvice | アノテーション名にAspectと名の付く通り、AOPの役割を持つ。メソッドの前や後、または前後に共通的な処理を後付けすることができ、本来の責務とは直接関係のない処理を、各責務から分離した処理に使用する。 |
 | - | @Component | いろんなところから利用されるようなユーティリティに使用する。DIコンテナはあくまでインスタンスを管理するため、staticメソッドを集めたようなユーティリティクラスは作らずに@Componentを付与してインスタンスをDIコンテナに管理させることが推奨される。 |
-
 
 
 
