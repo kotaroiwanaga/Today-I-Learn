@@ -43,8 +43,8 @@ INNER JOIN -- この行以外同じ文
 	
 -----------------------------------------------------------------
 取得結果
-first_name	last_name	department_name   emp_delflg   dap_delflg
-一郎	       山田	     営業部             0            0
+first_name      last_name      department_name    emp_delflg   dap_delflg
+一郎             山田            営業部             0            0
 ```
 
 
@@ -67,9 +67,9 @@ LEFT JOIN -- この行以外同じ文
 	
 -----------------------------------------------------------------
 取得結果
-first_name	last_name	department_name   emp_delflg   dap_delflg
-一郎	       山田        営業部             0            0
-三郎	       田中        営業部             1            0 
+first_name      last_name      department_name    emp_delflg   dap_delflg
+一郎             山田            営業部             0            0
+三郎             田中            営業部             1            0 
 ```
 
   上記それぞれINNER JOIN、LEFT JOINを使用したSELECT文ではON句に同じ条件を書いているにも関わらず、結果が異なっている。LEFT JOINでは `left_tb.delflg = '0'`が効いていないことがわかる。
@@ -107,8 +107,8 @@ INNER JOIN
 	
 -----------------------------------------------------------------
 取得結果
-first_name	last_name	department_name   emp_delflg   dap_delflg
-一郎	       山田	     営業部             0            0
+first_name      last_name      department_name    emp_delflg   dap_delflg
+一郎             山田            営業部             0            0
 ```
 
 - WHERE
@@ -131,8 +131,8 @@ AND right_tb.delflg = '0'
 	
 -----------------------------------------------------------------
 取得結果
-first_name	last_name	department_name   emp_delflg   dap_delflg
-一郎	       山田	     営業部             0            0
+first_name      last_name      department_name    emp_delflg   dap_delflg
+一郎             山田            営業部             0            0
 ```
 
 
