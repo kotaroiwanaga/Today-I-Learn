@@ -26,7 +26,7 @@ department(部署)テーブル
 | 2    | 人事部          | 1      |
 
 - INNER JOIN
-```sql
+```mysql
 SELECT
 	left_tb.first_name,
 	left_tb.last_name,
@@ -50,7 +50,7 @@ first_name	last_name	department_name   emp_delflg   dap_delflg
 
 
 - LEFT JOIN
-```sql
+```mysql
 SELECT
 	left_tb.first_name,
 	left_tb.last_name,
@@ -86,16 +86,51 @@ first_name	last_name	department_name   emp_delflg   dap_delflg
 
 #### 例) INNER JOIN と WHEREで同じ絞り込み条件を書く
 
-- INNER JOIN
+- INNER JOIN（さっきと同じSQL）
 
-```sql
-
+```mysql
+SELECT
+	left_tb.first_name,
+	left_tb.last_name,
+	right_tb.department_name,
+	left_tb.delflg AS emp_delflg,
+	right_tb.delflg AS dep_delflg
+FROM
+	employee AS left_tb
+INNER JOIN
+	department AS right_tb
+	ON left_tb.department_id = right_tb.id
+	AND left_tb.delflg = '0'
+	AND right_tb.delflg = '0'
+	
+-----------------------------------------------------------------
+取得結果
+first_name	last_name	department_name   emp_delflg   dap_delflg
+一郎	       山田	     営業部             0            0
 ```
 
 - WHERE
 
-```sql
-
+```mysql
+SELECT
+	left_tb.first_name,
+	left_tb.last_name,
+	right_tb.department_name,
+	left_tb.delflg AS emp_delflg,
+	right_tb.delflg AS dep_delflg
+FROM
+	employee AS left_tb
+INNER JOIN
+	department AS right_tb
+	ON left_tb.department_id = right_tb.id
+WHERE
+	left_tb.delflg = '0'
+AND right_tb.delflg = '0'
+	
+-----------------------------------------------------------------
+取得結果
+first_name	last_name	department_name   emp_delflg   dap_delflg
+一郎	       山田	     営業部             0            0
 ```
 
 
