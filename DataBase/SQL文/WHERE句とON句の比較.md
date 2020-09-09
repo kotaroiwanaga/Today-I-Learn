@@ -5,10 +5,10 @@
 
 ###### ※以降OUTER JOINに関してはLEFT JOINを代表として説明していくが、他のOUTER JOINとも共通することなので、LEFT JOIN ⇒ OUTER JOINだと思って読んでください。
 
-## ON句 ~INNER JOINとLEFT JOINの比較~
-ON句はFROM句の中でJOIN句とセットで使用する。JOIN句はテーブルのレコード同士を結合させることができる。ON句に書くのは**「結合条件=結合させるレコード間で満たすべき条件」**である。「ON句には結合条件を書く」というのはINNER JOINとLEFT JOINで共通していることであるが、WHERE句と比較するうえで大事になるのはINNER JOINとLEFT JOINの意味の違いにある。  
+## ON句 ～INNER JOINとLEFT JOINの比較～
+ON句はFROM句の中でJOIN句とセットで使用する。JOIN句はテーブルのレコード同士を結合させることができる。ON句に書くのは **「結合条件=結合させるレコード間で満たすべき条件」** である。「ON句には結合条件を書く」というのはINNER JOINとLEFT JOINで共通していることであるが、WHERE句と比較するうえで大事になるのはINNER JOINとLEFT JOINの意味の違いにある。  
 
-INNER JOINのON句に書くのは**「両テーブルのレコード同士の組み合わせ条件=LEFT側・RIGHT側それぞれのレコードの絞り込み(抽出)条件」**であり、LEFT JOINのON句に書くのは**「LEFT側に結合させるRIGHT側のレコードの結合条件」**である。
+INNER JOINのON句に書くのは **「両テーブルのレコード同士の組み合わせ条件=LEFT側・RIGHT側それぞれのレコードの絞り込み(抽出)条件」** であり、LEFT JOINのON句に書くのは **「LEFT側に結合させるRIGHT側のレコードの結合条件」** である。
 
 ### 例) 以下のテーブルに対してそれぞれINNER JOINとLEFT (OUTER) JOIN句を使ってみる
 
@@ -72,13 +72,15 @@ first_name	last_name	department_name   emp_delflg   dap_delflg
 三郎	       田中        営業部             1            0 
 ```
 
-  上記それぞれINNER JOIN、LEFT JOINを使用したSELECT文ではON句に同じ条件を書いているにも関わらず、結果が異なっている。LEFT JOINでは `left_tb.delflg = '0'`が効いていないことがわかる。    
-  ここでは**INNER JOINはLEFT側とRIGHT側で結合条件を満たすレコード同士を結合**している。一方で**LEFT JOINのON句はLEFT側の各レコードに結合させるRIGHT側のレコードの結合条件**として扱われるため、**いくらLEFT側の絞り込み条件を書いても意味がない**。同じON句でありながらINNER JOINとLEFT JOINでは意味が異なるのである。  
+  上記それぞれINNER JOIN、LEFT JOINを使用したSELECT文ではON句に同じ条件を書いているにも関わらず、結果が異なっている。LEFT JOINでは `left_tb.delflg = '0'`が効いていないことがわかる。
+  
+  ここでは **INNER JOINはLEFT側とRIGHT側で結合条件を満たすレコード同士を結合** している。一方で**LEFT JOINのON句はLEFT側の各レコードに結合させるRIGHT側のレコードの結合条件**として扱われるため、**いくらLEFT側の絞り込み条件を書いても意味がない**。同じON句でありながらINNER JOINとLEFT JOINでは意味が異なるのである。  
+  
   正確に言うと**ON句には結合条件を書くのであり、どのテーブルの結合条件について書けるかはJOIN句の種類次第**になるということ。
 
 ## WHERE句
 
-前述の通り、FROM句ではJOIN句を使って複数のテーブルを組み合わせることができる。しかし、それはあくまでFROM句の内部を見るとわかることであって、**FROM句の外(WHERE句)から見るとFROM句にはテーブルが一つしかないように見える**。なぜなら、**WHERE句はFROM句内のすべてのテーブル結合(JOIN句の処理)を終えた後に実行されるから**である。よってWHERE句に書くのは**「絞り込み条件=FROM句のテーブルのレコードを絞り込む条件」**である。  
+前述の通り、FROM句ではJOIN句を使って複数のテーブルを組み合わせることができる。しかし、それはあくまでFROM句の内部を見るとわかることであって、**FROM句の外(WHERE句)から見るとFROM句にはテーブルが一つしかないように見える**。なぜなら、**WHERE句はFROM句内のすべてのテーブル結合(JOIN句の処理)を終えた後に実行されるから**である。よってWHERE句に書くのは **「絞り込み条件=FROM句のテーブルのレコードを絞り込む条件」** である。  
 - INNER JOINのON句：LEFT側・RIGHT側両方の絞り込み条件を書ける
 - WHERE句：FROM句の全体のレコードに絞り込み条件を書ける
 
