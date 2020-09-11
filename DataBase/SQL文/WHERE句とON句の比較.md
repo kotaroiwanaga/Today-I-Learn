@@ -5,7 +5,7 @@
 
 ###### ※以降OUTER JOINに関してはLEFT JOINを代表として説明していくが、他のOUTER JOINとも共通することなので、LEFT JOIN ⇒ OUTER JOINだと思って読んでください。
 
-## ON句 ～INNER JOINとLEFT JOINの比較～
+# ON句 ～INNER JOINとLEFT JOINの比較～
 ON句はFROM句の中でJOIN句とセットで使用する。JOIN句はテーブルのレコード同士を結合させることができる。ON句に書くのは **「結合条件=結合させるレコード間で満たすべき条件」** である。「ON句には結合条件を書く」というのはINNER JOINとLEFT JOINで共通していることであるが、WHERE句と比較するうえで大事になるのはINNER JOINとLEFT JOINの意味の違いにある。  
 
 INNER JOINのON句に書くのは **「両テーブルのレコード同士の組み合わせ条件=LEFT側・RIGHT側それぞれのレコードの絞り込み(抽出)条件」** であり、LEFT JOINのON句に書くのは **「LEFT側に結合させるRIGHT側のレコードの結合条件」** である。
@@ -78,7 +78,7 @@ first_name      last_name      department_name    emp_delflg   dap_delflg
 
   正確に言うと**ON句には結合条件を書くのであり、どのテーブルの結合条件について書けるかはJOIN句の種類次第**になるということ。
 
-## WHERE句とINNER JOIN ON句
+# WHERE句とINNER JOIN ON句
 
 前述の通り、FROM句ではJOIN句を使って複数のテーブルを組み合わせることができる。しかし、それはあくまでFROM句の内部を見るとわかることであって、**FROM句の外(WHERE句)から見るとFROM句にはテーブルが一つしかないように見える**。なぜなら、**WHERE句はFROM句内のすべてのテーブル結合(JOIN句の処理)を終えた後に実行されるから**である。よってWHERE句に書くのは **「絞り込み条件=FROM句のテーブルのレコードを絞り込む条件」** である。  
 - INNER JOINのON句：LEFT側・RIGHT側両方の絞り込み条件を書ける
