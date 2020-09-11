@@ -1,4 +1,4 @@
-# WHERE句とON句の違い
+# WHERE句とON句は違う
 「LEFT JOINのON句でLEFT側のテーブルの絞り込み条件を書いても意味ないよ」と
 業務中に指摘を受けて、ON句とWHERE句はどちらも条件式だからできることは同じだと勘違いしてたことに気づいた。  
 今回はINNER JOINとOUTER JOINの違いも踏まえつつ、ON句とWHERE句について比較していく。
