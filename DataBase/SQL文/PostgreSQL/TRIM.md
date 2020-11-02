@@ -1,4 +1,25 @@
 # (PostgresSQLの)TRIM
+characters（デフォルトでは空白）で**指定された文字群のみを含む最も長い文字列**を、stringの先頭、末尾、そしてその両方から削除する。
+
+## 文法
+### LEADING/LTRIM
+指定した文字群のみを含むもっともの長い文字列をstringの先頭から削除する
+
+## 注意点
+例えば以下のように書いたとすると'x'と'-'のみで構成される最も長い文字列を先頭・末尾から削除する
+```
+SELECT
+  'x-xxxabc-xx',
+  TRIM(BOTH 'x-' FROM 'x-xxxabc-xx'
+ ;
+ 
+ -- 結果
+ before      | after |
+ ---------------------
+ x-xxxabc-xx | abc   |
+```
+
+
 
 # 参考
 文字列関数と演算子  
