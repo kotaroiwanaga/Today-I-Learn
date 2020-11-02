@@ -11,7 +11,7 @@ characters（デフォルトでは空白）で**指定された文字群のみ�
 ```
 SELECT
   'x-xxxabc-xx',
-  TRIM(BOTH 'x-' FROM 'x-xxxabc-xx'
+  TRIM(BOTH 'x-' FROM 'x-xxxabc-xx')
  ;
  
  -- 結果
