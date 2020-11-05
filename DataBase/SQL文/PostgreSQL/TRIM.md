@@ -3,9 +3,26 @@ characters（デフォルトでは空白）で**指定された文字群のみ�
 
 ## 文法
 ### BOTH/TRIM
-指定した文字群のみを含む最も長い文字列をstringの両端から削除する。
+指定した文字群のみを含む最も長い文字列をstringの両端から削除する。 
+ちなみに文字群を指定しなかった場合は、空白を両端から削除する。
 
 ```sql
+-- 1.BOTHあり
+SELECT
+  'xabxcxx',
+  TRIM(BOTH 'x' FROM 'xabxcxx')
+ ;
+
+-- 2.BOTHなし
+ SELECT
+  'xabxcxx',
+  TRIM('x' FROM 'xabxcxx')
+ ;
+
+ -- 結果 (1,2とも同じ)
+ before      | after |
+ ---------------------
+ xabxcxx | abxc   |
 
 ```
 
