@@ -20,7 +20,7 @@ SELECT
  ;
 
  -- 結果 (1,2とも同じ)
- before      | after |
+ before  | after |
  ---------------------
  xabxcxx | abxc   |
 
