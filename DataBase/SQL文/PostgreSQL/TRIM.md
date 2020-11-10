@@ -30,17 +30,47 @@ SELECT
 指定した文字群のみを含む最も長い文字列をstringの先頭(左端)から削除する。
 
 ```sql
+-- 1.LEADING
+SELECT
+  'xabxcxx',
+  TRIM(LEADING 'x' FROM 'xabxcxx')
+ ;
 
+-- 2.LTRIM
+ SELECT
+  'xabxcxx',
+  LTRIM('x' FROM 'xabxcxx')
+ ;
+
+ -- 結果 (1,2とも同じ)
+ before  | after |
+ ---------------------
+ xabxcxx | abxcxx   |
 ```
 
 ### TRAILING/RTRIM
 指定した文字群のみを含む最も長い文字列をstringの末尾(右端)から削除する。
 
 ```sql
+-- 1.TRAILING
+SELECT
+  'xabxcxx',
+  TRIM(TRAILING 'x' FROM 'xabxcxx')
+ ;
 
+-- 2.RTRIM
+ SELECT
+  'xabxcxx',
+  RTRIM('x' FROM 'xabxcxx')
+ ;
+
+ -- 結果 (1,2とも同じ)
+ before  | after |
+ ---------------------
+ xabxcxx | xabxc   |
 ```
 
-## 注意点
+## PosgreSQLのTRIMの注意点
 例えば以下のように書いたとすると**'x'と'-'のみで構成される最も長い文字列**を先頭・末尾から削除する。  
 'x-'という並びは考慮されないので注意。
 ```
