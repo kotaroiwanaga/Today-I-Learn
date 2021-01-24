@@ -31,7 +31,7 @@ DevOpsの取り組みとして、システムに変更を加えても安全性�
 - 開発・実行環境仮想化ツール(Dockerなど)
 - テスト・ビルド自動化ツール(Jenkins,CircleCIなど)
 - コミュニケーション円滑化ツール(Slackなど)
-- etc
+- アジャイル開発(スクラム,エクストリームプログラミングなど)
 
 
 ## 参考
@@ -50,3 +50,6 @@ https://proengineer.internous.co.jp/content/columnfeature/13575#1
 
 システム運用とシステム保守の違いとは  
 https://mid-works.com/columns/freelance-career/engineers/1074220
+
+アジャイルとは何か？今あらためて誤魔化さずに実践的に説明してみる  
+https://qiita.com/567000/items/33c8821f014885024577
