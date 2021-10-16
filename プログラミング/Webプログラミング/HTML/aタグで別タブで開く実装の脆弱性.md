@@ -19,7 +19,7 @@ GoogleChromeなどではすでにセキュリティ対策されてるので、In
 ![target=_blank02](Images/target=_blank02.PNG)
 
 さすがにInternet Explorerでもブロックされるようだ。  
-「ブロックされているコンテンツを許可」をクリックしてから元リンクに戻ってみると..。  
+「ブロックされているコンテンツを許可」をクリックしてからリンク元に戻ってみると..。  
 ![target=_blank03](Images/target=_blank03.PNG)
 
 こわっ。  
