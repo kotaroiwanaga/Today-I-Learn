@@ -30,6 +30,10 @@ GoogleChromeなどではすでにセキュリティ対策されてるので、In
 ```
 <a href="[リンク先URL]" target="_blank" rel="noopener noreferrer">リンク</a>
 ```
+noopenerはWindows.opernerプロパティをnullに設定することで、リンク元の文書にアクセスできないようにする。  
+noreferrerはWindows.opernerプロパティをnullに設定するとともに、そのほかのリンク元の情報をリンク先に送信しないようにしてくれる。  
+noreferrerのほうが対応範囲が広いが、比較的新しい機能のため対応していないブラウザが多い。
+
 ほとんどのブラウザではこのような対策がすでにされているみたい。
 
 ## 参考
