@@ -13,9 +13,28 @@
 [リンク元URL書き換え](aタグで別タブで開く実装の脆弱性)
 
 GoogleChromeなどではすでにセキュリティ対策されてるので、Internet Explorerで開いてみる。  
+![target=_blank01](Images/target=_blank01.PNG)
+
+リンクをクリックすると別タブでリンク先が開く。  
+![target=_blank02](Images/target=_blank02.PNG)
+
+さすがにInternet Explorerでもブロックされるようだ。  
+「ブロックされているコンテンツを許可」をクリックしてから元リンクに戻ってみると..。  
+![target=_blank03](Images/target=_blank03.PNG)
+
+こわっ。  
+例えばもし書き換えられたURLがAmazonのログイン画面を偽造したサイトだったら、間違えてアカウントとパスワード入力してしまうかもしれない。この脆弱性はいわゆるフィッシング詐欺の手段として悪用されている。
 
 ## セキュリティ問題の回避方法
+以下のように記述を追加してリンク元にアクセスできないようにする。
+```
+<a href="[リンク先URL]" target="_blank" rel="noopener noreferrer">リンク</a>
+```
+ほとんどのブラウザではこのような対策がすでにされているみたい。
 
 ## 参考
 実はヤバい？aタグと別タブで開く（target=”_blank”）の使い方　  
 https://wwg.co.jp/blog/3807#an21
+
+HTMLでリンクを別タブ・別ウィンドウで開く方法と、脆弱性に関する注意  
+https://toragramming.com/web/html/html-link-target-blank/
