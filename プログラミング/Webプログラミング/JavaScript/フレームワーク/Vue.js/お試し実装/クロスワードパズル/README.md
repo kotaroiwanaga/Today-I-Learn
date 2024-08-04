@@ -6,5 +6,5 @@
 [solve-puzzle.html](solve-puzzle.html)
 
 ### デプロイURL
-[クロスワードパズル](https://script.google.com/macros/s/AKfycbwv2kqfeJeJT86M-B-F7dLvUSL-y-p3g-yEbJwRut84fyzQkzvQndkUlH1ZsHBdihK_/exec)
+[クロスワードパズル](https://script.google.com/macros/s/AKfycbxRtvEnSINlZAj-m1njuH7lWP3E89RyJiMBNABijPW_vTznyLFJHtSRHSnYr-Eu2jrS/exec)
 
