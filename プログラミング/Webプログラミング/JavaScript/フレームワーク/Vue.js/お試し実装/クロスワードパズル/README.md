@@ -2,9 +2,11 @@
 クロスワードパズルを解くWebページのお試し実装。
 
 # リンク
-### ソース
+  
+- ソース  
 [solve-puzzle.html](solve-puzzle.html)
-
-### デプロイURL
+  
+  
+- デプロイしたWebページURL  
 [クロスワードパズル](https://script.google.com/macros/s/AKfycbxRtvEnSINlZAj-m1njuH7lWP3E89RyJiMBNABijPW_vTznyLFJHtSRHSnYr-Eu2jrS/exec)
 
