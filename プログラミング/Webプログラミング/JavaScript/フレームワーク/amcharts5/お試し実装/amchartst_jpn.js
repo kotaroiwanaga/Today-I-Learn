@@ -100,6 +100,7 @@ let prefecture = {
     {id:"JP-47"}
   ];
 
+  // 色分け用プロパティ(value)の設定
   for(let data of dispData){
     // data.userCnt == undefinedもfalseになる想定
     if(data.userCnt > 0){
@@ -170,6 +171,7 @@ let prefecture = {
   });
 
   // これを先に書くと↑が動かなくなる
+  // ヒートマップの設定
   polygonSeries.set("heatRules", [{
     target: polygonSeries.mapPolygons.template,
     dataField: "value",
