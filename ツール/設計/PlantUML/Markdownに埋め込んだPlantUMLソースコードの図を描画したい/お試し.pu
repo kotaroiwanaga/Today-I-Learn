@@ -1,0 +1,8 @@
+@startuml おためし
+
+entity てすと {
+    +id: string,
+    name: string
+}
+
+@enduml
