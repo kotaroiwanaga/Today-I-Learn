@@ -5,7 +5,7 @@
 - さらにGitHub上でも描画できるとなおよい。
 
 # 進捗
-VSCodeプレビューがうまくいかない...
+VSCodeプレビューまで。
 
 # やったこと
 ## まずは単にmdファイルを作ってみる
@@ -36,7 +36,7 @@ entity てすと {
 ## Jarファイルのパス指定
 参考URLをもとにプレビュー画像を描画するJARファイルをパスを設定する。  
 
-拡張機能「Markdown Preview Enhanced」の設定を開く。
+拡張機能「Markdown Preview Enhanced」をインストールし、設定を開く。
 
 ![VSCode操作](Markdownに埋め込んだPlantUMLソースコードの図を描画したい/JARファイルパスの設定①.png)
 
@@ -46,12 +46,11 @@ VSCode拡張機能でインストールしたPlantUMLのJARファイルパス
 
 ![VSCode操作](Markdownに埋め込んだPlantUMLソースコードの図を描画したい/JARファイルパスの設定②.png)
 
-改めてmdファイルのプレビューを開いてみると...
+改めてmdファイルのプレビューを開いてみると...  
+※markdown-preview-enhancedのmdプレビューを開くこと
 
 ![mdファイルプレビュー](Markdownに埋め込んだPlantUMLソースコードの図を描画したい/JARファイルパス設定後.png)  
-変わらねえじゃねえか。  
-というか「PlantUMLサーバがありません。」って表示の時点で  
-JARファイルじゃなくてリモートサーバのURL見に行こうとしてるよね。
+いけた！
 
 # 参考
 【2023年版】VSCodeでPlantUMLを単独・MarkDown埋め込みの両方で使えるようにする  
