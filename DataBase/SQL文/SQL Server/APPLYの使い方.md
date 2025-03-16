@@ -157,3 +157,11 @@ OUTER APPLY
     ) AS emp
 ;
 ```
+
+# 参考
+【SQL Server】APPLY オペレータ  
+https://yawalab.com/archives/343/apply-%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%82%BF/
+
+SQL Server の APPLY オペレータ  
+https://sql55.com/t-sql/sql-server-apply-operator.php
+
